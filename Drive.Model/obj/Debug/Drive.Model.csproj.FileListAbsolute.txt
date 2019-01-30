@@ -1,0 +1,22 @@
+F:\TestProjects\Drive\CZBK.ItcastOA.Model\bin\Debug\Drive.Model.dll.config
+F:\TestProjects\Drive\CZBK.ItcastOA.Model\bin\Debug\Drive.Model.dll
+F:\TestProjects\Drive\CZBK.ItcastOA.Model\bin\Debug\Drive.Model.pdb
+F:\TestProjects\Drive\CZBK.ItcastOA.Model\bin\Debug\EntityFramework.dll
+F:\TestProjects\Drive\CZBK.ItcastOA.Model\bin\Debug\EntityFramework.SqlServer.dll
+F:\TestProjects\Drive\CZBK.ItcastOA.Model\bin\Debug\EntityFramework.xml
+F:\TestProjects\Drive\CZBK.ItcastOA.Model\bin\Debug\EntityFramework.SqlServer.xml
+F:\TestProjects\Drive\CZBK.ItcastOA.Model\bin\Debug\zh-Hans\EntityFramework.resources.dll
+F:\TestProjects\Drive\CZBK.ItcastOA.Model\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+F:\TestProjects\Drive\CZBK.ItcastOA.Model\obj\Debug\Drive.Model.dll
+F:\TestProjects\Drive\CZBK.ItcastOA.Model\obj\Debug\Drive.Model.pdb
+E:\Visual Studio 2012\Projects\Drive\Drive.Model\bin\Debug\Drive.Model.dll.config
+E:\Visual Studio 2012\Projects\Drive\Drive.Model\bin\Debug\Drive.Model.dll
+E:\Visual Studio 2012\Projects\Drive\Drive.Model\bin\Debug\Drive.Model.pdb
+E:\Visual Studio 2012\Projects\Drive\Drive.Model\bin\Debug\EntityFramework.dll
+E:\Visual Studio 2012\Projects\Drive\Drive.Model\bin\Debug\EntityFramework.SqlServer.dll
+E:\Visual Studio 2012\Projects\Drive\Drive.Model\bin\Debug\EntityFramework.xml
+E:\Visual Studio 2012\Projects\Drive\Drive.Model\bin\Debug\EntityFramework.SqlServer.xml
+E:\Visual Studio 2012\Projects\Drive\Drive.Model\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\Visual Studio 2012\Projects\Drive\Drive.Model\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+E:\Visual Studio 2012\Projects\Drive\Drive.Model\obj\Debug\Drive.Model.dll
+E:\Visual Studio 2012\Projects\Drive\Drive.Model\obj\Debug\Drive.Model.pdb

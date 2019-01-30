@@ -1,0 +1,28 @@
+F:\TestProjects\Drive\CZBK.ItcastOA.IDAL\bin\Debug\Drive.IDAL.dll.config
+F:\TestProjects\Drive\CZBK.ItcastOA.IDAL\bin\Debug\Drive.IDAL.dll
+F:\TestProjects\Drive\CZBK.ItcastOA.IDAL\bin\Debug\Drive.IDAL.pdb
+F:\TestProjects\Drive\CZBK.ItcastOA.IDAL\bin\Debug\Drive.Model.dll
+F:\TestProjects\Drive\CZBK.ItcastOA.IDAL\bin\Debug\EntityFramework.dll
+F:\TestProjects\Drive\CZBK.ItcastOA.IDAL\bin\Debug\EntityFramework.SqlServer.dll
+F:\TestProjects\Drive\CZBK.ItcastOA.IDAL\bin\Debug\Drive.Model.pdb
+F:\TestProjects\Drive\CZBK.ItcastOA.IDAL\bin\Debug\EntityFramework.xml
+F:\TestProjects\Drive\CZBK.ItcastOA.IDAL\bin\Debug\EntityFramework.SqlServer.xml
+F:\TestProjects\Drive\CZBK.ItcastOA.IDAL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+F:\TestProjects\Drive\CZBK.ItcastOA.IDAL\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+F:\TestProjects\Drive\CZBK.ItcastOA.IDAL\obj\Debug\Drive.IDAL.csprojResolveAssemblyReference.cache
+F:\TestProjects\Drive\CZBK.ItcastOA.IDAL\obj\Debug\Drive.IDAL.dll
+F:\TestProjects\Drive\CZBK.ItcastOA.IDAL\obj\Debug\Drive.IDAL.pdb
+E:\Visual Studio 2012\Projects\Drive\Drive.IDAL\bin\Debug\Drive.IDAL.dll.config
+E:\Visual Studio 2012\Projects\Drive\Drive.IDAL\bin\Debug\Drive.IDAL.dll
+E:\Visual Studio 2012\Projects\Drive\Drive.IDAL\bin\Debug\Drive.IDAL.pdb
+E:\Visual Studio 2012\Projects\Drive\Drive.IDAL\bin\Debug\Drive.Model.dll
+E:\Visual Studio 2012\Projects\Drive\Drive.IDAL\bin\Debug\EntityFramework.dll
+E:\Visual Studio 2012\Projects\Drive\Drive.IDAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\Visual Studio 2012\Projects\Drive\Drive.IDAL\bin\Debug\Drive.Model.pdb
+E:\Visual Studio 2012\Projects\Drive\Drive.IDAL\bin\Debug\EntityFramework.xml
+E:\Visual Studio 2012\Projects\Drive\Drive.IDAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\Visual Studio 2012\Projects\Drive\Drive.IDAL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\Visual Studio 2012\Projects\Drive\Drive.IDAL\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+E:\Visual Studio 2012\Projects\Drive\Drive.IDAL\obj\Debug\Drive.IDAL.csprojResolveAssemblyReference.cache
+E:\Visual Studio 2012\Projects\Drive\Drive.IDAL\obj\Debug\Drive.IDAL.dll
+E:\Visual Studio 2012\Projects\Drive\Drive.IDAL\obj\Debug\Drive.IDAL.pdb

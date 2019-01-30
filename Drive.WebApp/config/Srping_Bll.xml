@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects >
+ 
+  <!--1.设置id(B层 userbll(对外访问的接口)，命名空间.类名，程序集名称， >-->
+  <!--2.再设置要转接的IDAL层-->
+  <object id="IUserBll" type="Drive.BLL.UserInfoService,Drive.BLL" singleton="false">
+    <!-- <property name="IUserDal" ref=""/> -->
+    <!--BLL引用IDAL-->
+  </object>
+
+  <object id="ILogBll" type="Drive.BLL.OperLogService,Drive.BLL" singleton="false">
+    <!-- <property name="IUserDal" ref=""/> -->
+    <!--BLL引用IDAL-->
+  </object>
+</objects>

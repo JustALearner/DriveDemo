@@ -1,0 +1,15 @@
+D:\传智讲课\0413班\OA\OA项目，第一天Asp.netMVC原理，框架搭建\CZBK.ItcastOA\CZBK.ItcastOA.DALFactory\bin\Debug\CZBK.ItcastOA.DALFactory.dll.config
+D:\传智讲课\0413班\OA\OA项目，第一天Asp.netMVC原理，框架搭建\CZBK.ItcastOA\CZBK.ItcastOA.DALFactory\bin\Debug\CZBK.ItcastOA.DALFactory.dll
+D:\传智讲课\0413班\OA\OA项目，第一天Asp.netMVC原理，框架搭建\CZBK.ItcastOA\CZBK.ItcastOA.DALFactory\bin\Debug\CZBK.ItcastOA.DALFactory.pdb
+D:\传智讲课\0413班\OA\OA项目，第一天Asp.netMVC原理，框架搭建\CZBK.ItcastOA\CZBK.ItcastOA.DALFactory\bin\Debug\CZBK.ItcastOA.DAL.dll
+D:\传智讲课\0413班\OA\OA项目，第一天Asp.netMVC原理，框架搭建\CZBK.ItcastOA\CZBK.ItcastOA.DALFactory\bin\Debug\CZBK.ItcastOA.IDAL.dll
+D:\传智讲课\0413班\OA\OA项目，第一天Asp.netMVC原理，框架搭建\CZBK.ItcastOA\CZBK.ItcastOA.DALFactory\bin\Debug\CZBK.ItcastOA.Model.dll
+D:\传智讲课\0413班\OA\OA项目，第一天Asp.netMVC原理，框架搭建\CZBK.ItcastOA\CZBK.ItcastOA.DALFactory\bin\Debug\EntityFramework.dll
+D:\传智讲课\0413班\OA\OA项目，第一天Asp.netMVC原理，框架搭建\CZBK.ItcastOA\CZBK.ItcastOA.DALFactory\bin\Debug\CZBK.ItcastOA.DAL.pdb
+D:\传智讲课\0413班\OA\OA项目，第一天Asp.netMVC原理，框架搭建\CZBK.ItcastOA\CZBK.ItcastOA.DALFactory\bin\Debug\CZBK.ItcastOA.IDAL.pdb
+D:\传智讲课\0413班\OA\OA项目，第一天Asp.netMVC原理，框架搭建\CZBK.ItcastOA\CZBK.ItcastOA.DALFactory\bin\Debug\CZBK.ItcastOA.Model.pdb
+D:\传智讲课\0413班\OA\OA项目，第一天Asp.netMVC原理，框架搭建\CZBK.ItcastOA\CZBK.ItcastOA.DALFactory\bin\Debug\EntityFramework.xml
+D:\传智讲课\0413班\OA\OA项目，第一天Asp.netMVC原理，框架搭建\CZBK.ItcastOA\CZBK.ItcastOA.DALFactory\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\传智讲课\0413班\OA\OA项目，第一天Asp.netMVC原理，框架搭建\CZBK.ItcastOA\CZBK.ItcastOA.DALFactory\obj\Debug\CZBK.ItcastOA.DALFactory.csprojResolveAssemblyReference.cache
+D:\传智讲课\0413班\OA\OA项目，第一天Asp.netMVC原理，框架搭建\CZBK.ItcastOA\CZBK.ItcastOA.DALFactory\obj\Debug\CZBK.ItcastOA.DALFactory.dll
+D:\传智讲课\0413班\OA\OA项目，第一天Asp.netMVC原理，框架搭建\CZBK.ItcastOA\CZBK.ItcastOA.DALFactory\obj\Debug\CZBK.ItcastOA.DALFactory.pdb

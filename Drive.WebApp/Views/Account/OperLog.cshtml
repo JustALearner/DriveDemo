@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html>
+    
+<head>
+    <title>日志查询</title>
+    <style>
+        table
+        {
+            width: 100%;
+            border: 1px solid black;
+            margin: auto;
+            border-collapse: collapse;
+        }
+
+        th, td
+        {
+            border: 1px solid black;
+        }
+
+        #state td, #state th
+        {
+            text-align: left;
+        }
+
+        #rule td, #rule th
+        {
+            text-align: left;
+        }
+
+        h3
+        {
+            margin: 20px 0px 0px 0px;
+        }
+        body {
+           background-image:url(image/back.png);
+           background-repeat:no-repeat;
+           background-size:cover
+        }
+        form {
+        }
+    </style>
+    
+</head>
+    <script src="http://www.cwcar.cn/Scripts/jquery-1.8.2.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            //login(1)
+        });
+
+        function login() {
+            query();
+        }
+
+        function toIndex() {
+            window.location.href="Index.html";
+        }
+
+        function query() {
+            var params = {"userCode":"1"};
+            $.ajax({
+                type: "POST",  //请求方式
+                url: "Account/Test",  //请求路径：页面/方法名字
+                data: params,     //参数
+                dataType: "text",
+                success: function (msg) {  //成功
+                    var obj = eval("(" + msg + ")");
+                    write(obj.Data);
+                },
+                error: function (obj, msg, e) {   //异常
+                    alert("OH,NO");
+                }
+            });
+        }
+
+        function write(data) {
+            for (var i = 0; i < data.length; i++) {
+                addRow(data[i]);
+            }
+        }
+
+        function addRow(rowData) {
+            var table = document.getElementById("logTab");
+            var row = table.insertRow(table.rows.length);//在table的最后增加一行,table.rows.length是表格的总行数
+            var cell = row.insertCell(0);//给新插入的行中添加单元格
+            cell.height = "24px";//一个单元格的高度，跟css样式中的line-height高度一样
+            cell.innerHTML = rowData.MenuCode;//设置新单元格的内容，这个根据需要，自己设置
+            cell = row.insertCell(1);//给新插入的行中添加单元格
+            cell.height = "24px";//一个单元格的高度，跟css样式中的line-height高度一样
+            cell.innerHTML = rowData.MenuName;//设置新单元格的内容，这个根据需要，自己设置
+            cell = row.insertCell(2);//给新插入的行中添加单元格
+            cell.height = "24px";//一个单元格的高度，跟css样式中的line-height高度一样
+            cell.innerHTML = rowData.ParentCode;//设置新单元格的内容，这个根据需要，自己设置
+            cell = row.insertCell(3);//给新插入的行中添加单元格
+            cell.height = "24px";//一个单元格的高度，跟css样式中的line-height高度一样
+            cell.innerHTML = rowData.MenuLevel;//设置新单元格的内容，这个根据需要，自己设置
+            cell = row.insertCell(4);//给新插入的行中添加单元格
+            cell.height = "24px";//一个单元格的高度，跟css样式中的line-height高度一样
+            cell.innerHTML = rowData.MenuCode;//设置新单元格的内容，这个根据需要，自己设置
+        }
+    </script>
+<body >
+    <p class="panel panel-warning">
+        <p class="panel-heading " style="background: #d9534f; color: #ffffff">
+            <span class="glyphicon glyphicon-th-large" style="margin-right: 10px" />日志查询
+        </p>
+    </p>
+    <form>
+    <p class="container">
+        <p class="row">
+            <p class="col-md-12">
+                <p class="input-group  ">
+                    <!--<span class="input-group-addon">账 号</span>-->
+                    <input type="text" name="txtUserId" class="form-control" maxlength="20" placeholder="输入帐号" />
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-search" style="margin-right: 10px"/>
+                    <button type="button" onclick="login()">查询数据</button></span>
+                </p>
+            </p>
+        </p>
+    </p>
+    </form>
+    <table class="table" id="logTab">
+        <thead>
+            <tr>
+                <th>序号</th>
+                <th>操作人</th>
+                <th>日志类型</th>
+                <th>操作时间</th>
+                <th>内容</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+</body>
+</html>

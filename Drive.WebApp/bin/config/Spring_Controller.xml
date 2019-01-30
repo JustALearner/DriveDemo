@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+  <description>An  example that demonstrates simple IoC features.</description>
+
+  <object type="Drive.WebApp.Controllers.AccountController,Drive.WebApp" singleton="false">
+    <property name="UserBll" ref="IUserBll"/>
+    <property name="LogBll" ref="ILogBll"/>
+  </object>
+
+  <object id="IUserBll" type="Drive.BLL.UserInfoService,Drive.BLL" singleton="false">
+  </object>
+  <object id="ILogBll" type="Drive.BLL.OperLogService,Drive.BLL" singleton="false">
+  </object>
+</objects>

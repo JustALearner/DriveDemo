@@ -1,0 +1,944 @@
+﻿@model IEnumerable<Drive.Model.T_Sys_User>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml"; 
+}
+
+
+@section head_style{      
+    @* <link rel="stylesheet" href="~/Scripts/drive/reset.css"> *@
+    <link rel="stylesheet" href="~/Content/drive/jx_list.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/drive/bmap_autocomplete.css">
+}
+@section head_script{
+      
+    <script src="~/Scripts/drive/hm.js"></script>
+    @* <script src="~/Scripts/drive/jquery.1.12.4.js"></script> *@
+}
+
+  @section body_header_style{
+      @* <link rel="stylesheet" href="~/Scripts/drive/comm_style.css"> *@
+      <link rel="stylesheet" href="~/Content/drive/font_949786_v8zsbvaxz6p.css">
+      <style>
+          .comment-header-vip-describe .jxedt-VIP {
+              font-size: 14px;
+              color: #00c356;
+          }
+      </style>
+  }
+    <div class="commonhead_line" style="border-top: 1px solid #00C356;"></div>
+    <div class="jx-list-wrap">
+        <article class="jx-list">
+            <div class="jx-list-position">
+
+            </div>
+            <div class="left-nav">
+                <div class="jx-list-header">
+                    <!--驾校搜索 start -->
+                    <nav>
+
+
+
+                    </nav>
+                    <!--驾校搜索 end   -->
+                    <div class="row jx-list-line"></div>
+                    <!--驾校列表 start -->
+                    <div class="row jx-list-page">
+                        <div class="row jx-list-detail-page">
+                            <div class="col-md-2">
+                                <a href="../Home/nhjxView" target="_blank">
+                                    <img src="~/Scripts/drive/n_v2c4f51e8bfbfe4bafb921cdf19b8bfb7c_31778da3c133c8b0.jpg"
+                                        alt="南湖驾校">
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-md-offset-1 jx-info">
+                                <p class="jx-list-info">
+                                    <span>
+
+                                        <a href="../Home/nhjxView" target="_blank"> 南湖驾校
+                                        </a>
+                                    </span>
+                                    <span class="JXMLXing_drill5"></span>
+                                    <!--<img src="//img.58cdn.com.cn/dist/jxedt/pc/products/jxdetail/images/drill5.png" alt="">-->
+                                    <span class="JXMLJian"></span>
+                                    <!--<img class="jian" src="//img.58cdn.com.cn/dist/jxedt/pc/products/jxdetail/images/jian.png" alt="">-->
+                                </p>
+                                <p class="jx-list-address">
+                                    <span>驾校地址：</span>
+                                    <span>湖北省武汉市洪山区新千家街12号</span></p>
+                                <p class="jx-list-star">
+                                    <img src="~/Scripts/drive/star.png">
+                                    <img src="~/Scripts/drive/star.png">
+                                    <img src="~/Scripts/drive/star.png">
+                                    <img src="~/Scripts/drive/star.png">
+                                    <img src="~/Scripts/drive/star.png">
+                                    <span>点评56条</span></p>
+                                <p class="jx-list-class">
+                                    <span>班型：</span>
+                                    <a href="../Home/nhjxView" target="_blank">
+                                        <span>无忧保过班</span>
+                                        <span>学生班</span>
+                                        <span>分期付款班</span>
+                                        <span>普通班</span>
+                                        <span>自动挡</span>
+                                        <span>金牌教练班</span>
+                                        <span>预定班</span>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="col-md-2 jx-distance">
+                                <p class="jx-list-money">￥500</p>
+                            </div>
+                        </div>
+                        <div class="row jx-list-detail-page">
+                            <div class="col-md-2">
+                                <a href="../Home/hyView" target="_blank">
+                                    <img src="~/Scripts/drive/n_v23977771ac68749af8b6c6c566bd10179_48f1d53cb160aaf2.jpg"
+                                        alt="翰阳驾校">
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-md-offset-1 jx-info">
+                                <p class="jx-list-info">
+                                    <span>
+
+                                        <a href="../Home/hyView" target="_blank"> 翰阳驾校 </a>
+                                    </span>
+                                    <span class="JXMLXing_drill5"></span>
+                                    <!--<img src="//img.58cdn.com.cn/dist/jxedt/pc/products/jxdetail/images/drill5.png" alt="">-->
+                                    <span class="JXMLJian"></span>
+                                    <!--<img class="jian" src="//img.58cdn.com.cn/dist/jxedt/pc/products/jxdetail/images/jian.png" alt="">-->
+                                </p>
+                                <p class="jx-list-address">
+                                    <span>驾校地址：</span>
+                                    <span>重庆市江北区大兴村·美连口腔-公交车站</span></p>
+                                <p class="jx-list-star">
+                                    <img src="~/Scripts/drive/star.png">
+                                    <img src="~/Scripts/drive/star.png">
+                                    <img src="~/Scripts/drive/star.png">
+                                    <img src="~/Scripts/drive/star.png">
+                                    <img src="~/Scripts/drive/star.png">
+                                    <span>点评21条</span></p>
+                                <p class="jx-list-class">
+                                    <span>班型：</span>
+                                    <a href="../Home/hyView" target="_blank">
+                                        <span>B2 特惠班</span>
+                                        <span>C2 精品班</span>
+                                        <span>C1 精品班</span>
+                                        <span>C2 大众班</span>
+                                        <span>C1 大众班</span>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="col-md-2 jx-distance">
+                                <p class="jx-list-money">￥3280</p>
+                            </div>
+                        </div>
+                        <div class="row jx-list-detail-page">
+                            <div class="col-md-2">
+                                <a href="../Home/sghxView" target="_blank">
+                                    <img src="~/Scripts/drive/n_v2dd947dc71a574ab0b8755bf4fb1bc370_69159f461eca33ef.jpg"
+                                        alt="深港凯旋驾校">
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-md-offset-1 jx-info">
+                                <p class="jx-list-info">
+                                    <span>
+
+                                        <a href="../Home/sghxView" target="_blank"> 深港凯旋驾校 </a>
+                                    </span>
+                                    <span class="JXMLXing_drill5"></span>
+                                    <!--<img src="//img.58cdn.com.cn/dist/jxedt/pc/products/jxdetail/images/drill5.png" alt="">-->
+                                    <span class="JXMLJian"></span>
+                                    <!--<img class="jian" src="//img.58cdn.com.cn/dist/jxedt/pc/products/jxdetail/images/jian.png" alt="">-->
+                                </p>
+                                <p class="jx-list-address">
+                                    <span>驾校地址：</span>
+                                    <span>重庆市南岸区学府大道2号附84号深港凯旋驾校</span></p>
+                                <p class="jx-list-star">
+                                    <img src="~/Scripts/drive/star.png">
+                                    <img src="~/Scripts/drive/star.png">
+                                    <img src="~/Scripts/drive/star.png">
+                                    <img src="~/Scripts/drive/star.png">
+                                    <img src="~/Scripts/drive/star.png">
+                                    <span>点评66条</span></p>
+                                <p class="jx-list-class">
+                                    <span>班型：</span>
+                                    <a href="../Home/sghxView" target="_blank">
+                                        <span>师生班自动挡</span>
+                                        <span>师生班手动挡</span>
+                                        <span>无忧班自动挡</span>
+                                        <span>无忧班手动挡</span>
+                                        <span>标准班自动挡</span>
+                                        <span>标准班手动挡</span>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="col-md-2 jx-distance">
+                                <p class="jx-list-money">￥3290</p>
+                            </div>
+                        </div>
+                        <div class="row jx-list-detail-page">
+                            <div class="col-md-2">
+                                <a href="../Home/stjxView" target="_blank">
+                                    <img src="~/Scripts/drive/n_v273458d823d23407aaeaeff0fea6f9588_a5acbd00abd608a0.jpg"
+                                        alt="申通驾校">
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-md-offset-1 jx-info">
+                                <p class="jx-list-info">
+                                    <span>
+
+                                        <a href="../Home/stjxView" target="_blank"> 申通驾校
+                                        </a>
+                                    </span>
+                                    <span class="JXMLXing_drill5"></span>
+                                    <!--<img src="//img.58cdn.com.cn/dist/jxedt/pc/products/jxdetail/images/drill5.png" alt="">-->
+                                    <span class="JXMLJian"></span>
+                                    <!--<img class="jian" src="//img.58cdn.com.cn/dist/jxedt/pc/products/jxdetail/images/jian.png" alt="">-->
+                                </p>
+                                <p class="jx-list-address">
+                                    <span>驾校地址：</span>
+                                    <span>上海市闵行区世界茶饮(莘庄店)</span></p>
+                                <p class="jx-list-star">
+                                    <img src="~/Scripts/drive/star1.png">
+                                    <img src="~/Scripts/drive/star1.png">
+                                    <img src="~/Scripts/drive/star1.png">
+                                    <img src="~/Scripts/drive/star1.png">
+                                    <img src="~/Scripts/drive/star1.png">
+                                    <span>点评0条</span></p>
+                                <p class="jx-list-class">
+                                    <span>班型：</span>
+                                    <a href="../Home/stjxView" target="_blank">
+                                        <span>江苏班</span>
+                                        <span>上海班</span>
+                                        <span>上海班自动挡</span>
+                                        <span>江苏班自动挡</span>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="col-md-2 jx-distance">
+                                <p class="jx-list-money">￥5980</p>
+                            </div>
+                        </div>
+                        <div class="row jx-list-detail-page">
+                            <div class="col-md-2">
+                                <a href="../Home/hyjxView" target="_blank">
+                                    <img src="~/Scripts/drive/n_v219efda40436f4553b443e85b0875fb7d_347c7f8f3f8abc6f.jpg"
+                                        alt="杭邮驾校共赢学车打铁关分校">
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-md-offset-1 jx-info">
+                                <p class="jx-list-info">
+                                    <span>
+
+                                        <a href="../Home/hyjxView" target="_blank">
+                                            杭邮驾校共赢学车打铁关分校 </a>
+                                    </span>
+                                    <span class="JXMLXing_drill5"></span>
+                                    <!--<img src="//img.58cdn.com.cn/dist/jxedt/pc/products/jxdetail/images/drill5.png" alt="">-->
+                                    <span class="JXMLJian"></span>
+                                    <!--<img class="jian" src="//img.58cdn.com.cn/dist/jxedt/pc/products/jxdetail/images/jian.png" alt="">-->
+                                </p>
+                                <p class="jx-list-address">
+                                    <span>驾校地址：</span>
+                                    <span>杭州市下城区和平广场</span></p>
+                                <p class="jx-list-star">
+                                    <img src="~/Scripts/drive/star.png">
+                                    <img src="~/Scripts/drive/star.png">
+                                    <img src="~/Scripts/drive/star.png">
+                                    <img src="~/Scripts/drive/star.png">
+                                    <img src="~/Scripts/drive/star.png">
+                                    <span>点评14条</span></p>
+                                <p class="jx-list-class">
+                                    <span>班型：</span>
+                                    <a href="../Home/hyjxView" target="_blank">
+                                        <span>特惠自动挡</span>
+                                        <span>手动挡</span>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="col-md-2 jx-distance">
+                                <p class="jx-list-money">￥4850</p>
+                            </div>
+                        </div>
+                        <div class="row jx-list-detail-page">
+                            <div class="col-md-2">
+                                <a href="../Home/sdjxView" target="_blank">
+                                    <img src="~/Scripts/drive/n_v267e7c6e071bf4599825a711db560feb0_1d2f8c96df73b884.jpg"
+                                        alt="赛达驾校北碚报名点">
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-md-offset-1 jx-info">
+                                <p class="jx-list-info">
+                                    <span>
+
+                                        <a href="../Home/sdjxView" target="_blank">
+                                            赛达驾校北碚报名点 </a>
+                                    </span>
+                                    <span class="JXMLXing_drill5"></span>
+                                    <!--<img src="//img.58cdn.com.cn/dist/jxedt/pc/products/jxdetail/images/drill5.png" alt="">-->
+                                    <span class="JXMLJian"></span>
+                                    <!--<img class="jian" src="//img.58cdn.com.cn/dist/jxedt/pc/products/jxdetail/images/jian.png" alt="">-->
+                                </p>
+                                <p class="jx-list-address">
+                                    <span>驾校地址：</span>
+                                    <span>重庆市北碚区滩口街</span></p>
+                                <p class="jx-list-star">
+                                    <img src="~/Scripts/drive/star.png">
+                                    <img src="~/Scripts/drive/star.png">
+                                    <img src="~/Scripts/drive/star.png">
+                                    <img src="~/Scripts/drive/star.png">
+                                    <img src="~/Scripts/drive/star.png">
+                                    <span>点评4条</span></p>
+                                <p class="jx-list-class">
+                                    <span>班型：</span>
+                                    <a href="../Home/sdjxView" target="_blank">
+                                        <span>B1大众班</span>
+                                        <span>B2无忧班</span>
+                                        <span>A1全包班</span>
+                                        <span>B2全包班</span>
+                                        <span>C1大众班 </span>
+                                        <span>C2大众班 </span>
+                                        <span>B2快速班</span>
+                                        <span>A1快速班</span>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="col-md-2 jx-distance">
+                                <p class="jx-list-money">￥9000</p>
+                            </div>
+                        </div>
+                        <div class="row jx-list-detail-page">
+                            <div class="col-md-2">
+                                <a href="../Home/hyjxfxView" target="_blank">
+                                    <img src="~/Scripts/drive/n_v252c8775f0d7d4fe3a5a78a2dda2851bc_8dbddaca0485401b.jpg"
+                                        alt="杭邮驾校共赢分校">
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-md-offset-1 jx-info">
+                                <p class="jx-list-info">
+                                    <span>
+
+                                        <a href="../Home/hyjxfxView" target="_blank">
+                                            杭邮驾校共赢分校 </a>
+                                    </span>
+                                    <span class="JXMLXing_drill5"></span>
+                                    <!--<img src="//img.58cdn.com.cn/dist/jxedt/pc/products/jxdetail/images/drill5.png" alt="">-->
+                                    <span class="JXMLJian"></span>
+                                    <!--<img class="jian" src="//img.58cdn.com.cn/dist/jxedt/pc/products/jxdetail/images/jian.png" alt="">-->
+                                </p>
+                                <p class="jx-list-address">
+                                    <span>驾校地址：</span>
+                                    <span>杭州市滨江区杭州杭邮机动车驾驶员培训有限公司</span></p>
+                                <p class="jx-list-star">
+                                    <img src="~/Scripts/drive/star.png">
+                                    <img src="~/Scripts/drive/star.png">
+                                    <img src="~/Scripts/drive/star.png">
+                                    <img src="~/Scripts/drive/star.png">
+                                    <img src="~/Scripts/drive/star.png">
+                                    <span>点评16条</span></p>
+                                <p class="jx-list-class">
+                                    <span>班型：</span>
+                                    <a href="../Home/hyjxfxView" target="_blank">
+                                        <span>特惠自动挡</span>
+                                        <span>手动挡</span>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="col-md-2 jx-distance">
+                                <p class="jx-list-money">￥4850</p>
+                            </div>
+                        </div>
+                </div>
+
+            </div>
+            <div class="right-nav">
+                <!--帮您找驾校-->
+                <link rel="stylesheet" href="~/Content/drive/font_700844_fzp3tfpjzio.css">
+
+
+
+                <form id="subForm" name="form" method="post" action="http://businessapi.jxedt.com/signup/platformsignup">
+                    <input type="hidden" id="name1" name="name" value="">
+                    <input type="hidden" id="mobile" name="mobile" value="">
+                    <input type="hidden" id="licensetype" name="licensetype" value="">
+                    <input type="hidden" id="messageid" name="messageid" value="">
+                    <!--验证码id-->
+                    <input type="hidden" id="validcode" name="validcode" value="">
+                    <!--验证码-->
+                    <input type="hidden" id="voiceid" name="validcode" value="">
+                    <!--语音验证码id-->
+                    <input type="hidden" id="source" name="source" value="pc">
+                    <input type="hidden" id="address" name="address" value="">
+
+                    <input type="hidden" id="provinceid" name="provinceid" value="">
+                    <input type="hidden" id="cityid" name="cityid" value="">
+                    <input type="hidden" id="areaid" name="areaid" value="">
+                    <input type="hidden" id="learntime" name="learntime" value="">
+                    <input type="hidden" id="learnprice" name="learnprice" value="">
+                    <input type="hidden" id="preference" name="preference" value="">
+
+                    <input type="hidden" id="lon" name="lon" value="">
+                    <input type="hidden" id="lat" name="lat" value="">
+                </form>
+                <div class="address-popup-wrap">
+                    <div class="address-popup">
+                        <div class="address-header">
+                            <div class="address-title">请选择出发地点</div>
+                            <div class="address-close">
+                                <i id="jxClose" class="iconfont icon-close"></i>
+                            </div>
+                        </div>
+                        <div class="address-input">
+                            <div id="r-result">详细地址：
+                                <input type="text" id="suggestId" placeholder="请选择上车地点" autocomplete="off">
+                                <i class="iconfont icon-u"></i>
+                            </div>
+                            <div id="searchResultPanel" style="border:1px solid #C0C0C0;width:150px;height:auto; display:none;"></div>
+                        </div>
+                        <div id="jxMap" style="overflow: hidden; position: relative; z-index: 0; background-color: rgb(243, 241, 236); color: rgb(0, 0, 0); text-align: left;">
+                            <div style="overflow: visible; position: absolute; z-index: 0; left: 4010px; top: -35355px; cursor: url(&quot;http://api0.map.bdimg.com/images/openhand.cur&quot;) 8 8, default;">
+                                <div class="BMap_mask" style="position: absolute; left: -4010px; top: 35355px; z-index: 9; overflow: hidden; user-select: none; width: 0px; height: 0px;"></div>
+                                <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 200;">
+                                    <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 800;"></div>
+                                    <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 700;"><span
+                                            class="BMap_Marker BMap_noprint" unselectable="on" "="" style=" position:
+                                            absolute; padding: 0px; margin: 0px; border: 0px; cursor: pointer;
+                                            background: url(&quot;http://api0.map.bdimg.com/images/blank.gif&quot;);
+                                            width: 19px; height: 25px; left: -4020px; top: 35330px; z-index: -4509210;"
+                                            title=""></span></div>
+                                    <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 600;"></div>
+                                    <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 500;"></div>
+                                    <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 400;"><span
+                                            class="BMap_Marker" unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 0px; height: 0px; left: -4020px; top: 35330px; z-index: -4509210;">
+                                            <div style="position: absolute; margin: 0px; padding: 0px; width: 19px; height: 25px; overflow: hidden;"><img
+                                                    src="http://api0.map.bdimg.com/images/marker_red_sprite.png" style="display: block; border:none;margin-left:0px; margin-top:0px; "></div>
+                                        </span></div>
+                                    <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 300;"><span
+                                            unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 20px; height: 11px; left: -4016px; top: 35344px;">
+                                            <div style="position: absolute; margin: 0px; padding: 0px; width: 20px; height: 11px; overflow: hidden;"><img
+                                                    src="http://api0.map.bdimg.com/images/marker_red_sprite.png" style="display: block; border:none;margin-left:-19px; margin-top:-13px; "></div>
+                                        </span></div>
+                                    <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 201;"></div>
+                                    <div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 200;"></div>
+                                </div>
+                                <div style="position: absolute; overflow: visible; top: 0px; left: 0px; z-index: 1;">
+                                    <div style="position: absolute; overflow: visible; z-index: -100; left: -4010px; top: 35355px; display: block; transform: translate3d(0px, 0px, 0px);"><img
+                                            src="http://online0.map.bdimg.com/tile/?qt=vtile&amp;x=774&amp;y=156&amp;z=12&amp;styles=pl&amp;scaler=1&amp;udt=20190124"
+                                            style="position: absolute; border: none; width: 256px; height: 256px; left: -191px; top: -181px; max-width: none; opacity: 1;"></div>
+                                </div>
+                                <div style="position: absolute; overflow: visible; top: 0px; left: 0px; z-index: 2; display: none;">
+                                    <div style="position: absolute; overflow: visible; top: 0px; left: 0px; z-index: 0; display: none;"></div>
+                                </div>
+                                <div style="position: absolute; overflow: visible; top: 0px; left: 0px; z-index: 3;"></div>
+                            </div>
+                            <div class="pano_close" title="退出全景" style="z-index: 1201; display: none;"></div><a class="pano_pc_indoor_exit"
+                                title="退出室内景" style="z-index: 1201; display: none;"><span style="float:right;margin-right:12px;">出口</span></a>
+                            <div class=" anchorBL" style="height: 32px; position: absolute; z-index: 30; text-size-adjust: none; bottom: 20px; right: auto; top: auto; left: 1px; display: none;"><a
+                                    title="到百度地图查看此区域" target="_blank" href="http://map.baidu.com/?sr=1" style="outline: none;"><img
+                                        style="border:none;width:77px;height:32px" src="http://api0.map.bdimg.com/images/copyright_logo.png"></a></div>
+                            <div id="zoomer" style="position:absolute;z-index:0;top:0px;left:0px;overflow:hidden;visibility:hidden;cursor:url(http://api0.map.bdimg.com/images/openhand.cur) 8 8,default">
+                                <div class="BMap_zoomer" style="top:0;left:0;"></div>
+                                <div class="BMap_zoomer" style="top:0;right:0;"></div>
+                                <div class="BMap_zoomer" style="bottom:0;left:0;"></div>
+                                <div class="BMap_zoomer" style="bottom:0;right:0;"></div>
+                            </div>
+                            <div unselectable="on" class=" BMap_stdMpCtrl BMap_stdMpType3 BMap_noprint anchorBR" style="width: 22px; height: 42px; bottom: 10px; right: 10px; top: auto; left: auto; position: absolute; z-index: 1100; text-size-adjust: none;">
+                                <div class="BMap_stdMpPan">
+                                    <div class="BMap_button BMap_panN" title="向上平移"></div>
+                                    <div class="BMap_button BMap_panW" title="向左平移"></div>
+                                    <div class="BMap_button BMap_panE" title="向右平移"></div>
+                                    <div class="BMap_button BMap_panS" title="向下平移"></div>
+                                    <div class="BMap_stdMpPanBg BMap_smcbg"></div>
+                                </div>
+                                <div class="BMap_stdMpZoom" style="height: 42px; width: 22px;">
+                                    <div class="BMap_button BMap_stdMpZoomIn" title="放大一级" style="left: 0px;">
+                                        <div class="BMap_smcbg"></div>
+                                    </div>
+                                    <div class="BMap_button BMap_stdMpZoomOut" title="缩小一级" style="top: 21px; left: 0px;">
+                                        <div class="BMap_smcbg"></div>
+                                    </div>
+                                    <div class="BMap_stdMpSlider" style="height: 0px;">
+                                        <div class="BMap_stdMpSliderBgTop" style="height: 0px;">
+                                            <div class="BMap_smcbg"></div>
+                                        </div>
+                                        <div class="BMap_stdMpSliderBgBot"></div>
+                                        <div class="BMap_stdMpSliderMask" title="放置到此级别"></div>
+                                        <div class="BMap_stdMpSliderBar" title="拖动缩放" style="cursor: url(&quot;http://api0.map.bdimg.com/images/openhand.cur&quot;) 8 8, default;">
+                                            <div class="BMap_smcbg"></div>
+                                        </div>
+                                    </div>
+                                    <div class="BMap_zlHolder">
+                                        <div class="BMap_zlSt">
+                                            <div class="BMap_smcbg"></div>
+                                        </div>
+                                        <div class="BMap_zlCity">
+                                            <div class="BMap_smcbg"></div>
+                                        </div>
+                                        <div class="BMap_zlProv">
+                                            <div class="BMap_smcbg"></div>
+                                        </div>
+                                        <div class="BMap_zlCountry">
+                                            <div class="BMap_smcbg"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="BMap_stdMpGeolocation" style="position: initial; display: none; margin-top: 43px; margin-left: 10px;">
+                                    <div class="BMap_geolocationContainer" style="position: initial; width: 24px; height: 24px; overflow: hidden; margin: 0px; box-sizing: border-box;">
+                                        <div class="BMap_geolocationIconBackground" style="width: 24px; height: 24px; background-image: url(http://api0.map.bdimg.com/images/navigation-control/geolocation-control/pc/bg-20x20.png); background-size: 20px 20px; background-position: 3px 3px; background-repeat: no-repeat;">
+                                            <div class="BMap_geolocationIcon" style="position: initial; width: 24px; height: 24px; cursor: pointer; background-image: url('http://api0.map.bdimg.com/images/navigation-control/geolocation-control/pc/success-10x10.png'); background-size: 10px 10px; background-repeat: no-repeat; background-position: center;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div unselectable="on" class=" BMap_cpyCtrl BMap_noprint anchorBL" style="cursor: default; white-space: nowrap; color: black; background: none; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 11px; line-height: 15px; font-family: arial, sans-serif; bottom: 2px; right: auto; top: auto; left: 4px; position: absolute; z-index: 10; text-size-adjust: none;"><span
+                                    _cid="1" style="display: inline;"><span style="background: rgba(255, 255, 255, 0.701961);padding: 0px 1px;line-height: 16px;display: inline;height: 16px;">©&nbsp;2019
+                                        Baidu - GS(2018)5572号 - 甲测资字1100930 - 京ICP证030173号 - Data © 长地万方</span></span></div>
+                        </div>
+                        <div class="map-btn">
+                            <button class="confirm">确认</button>
+                            <button class="cancel">取消</button>
+                        </div>
+                    </div>
+                </div>
+                <!--驾校广告位-->
+                <!--全国-->
+                <div class="jx-list-recommend">
+                    <p class="jx-recommend">驾校推荐</p>
+
+                    <div class="jx-recommend-imgs">
+                        <a href="javascript:void(0)" data-track="JXEDT_JXLB_GG_1">
+                            <img src="~/Scripts/drive/jxc_xwyd.png" alt="" srcset="">
+                        </a>
+                    </div>
+
+                    <div class="jx-recommend-imgs">
+                        <a href="javascript:void(0)" data-track="JXEDT_JXLB_GG_2">
+                            <img src="~/Scripts/drive/jxc_xwyd.png" alt="" srcset="">
+                        </a>
+                    </div>
+
+                    <div class="jx-recommend-imgs">
+                        <a href="javascript:void(0)" data-track="JXEDT_JXLB_GG_3">
+                            <img src="~/Scripts/drive/jxc_xwyd.png" alt="" srcset="">
+                        </a>
+                    </div>
+
+                    <div class="jx-recommend-imgs">
+                        <a href="javascript:void(0)" data-track="JXEDT_JXLB_GG_4">
+                            <img src="~/Scripts/drive/jxc_xwyd.png" alt="" srcset="">
+                        </a>
+                    </div>
+
+                    <div class="jx-recommend-imgs">
+                        <a href="javascript:void(0)" data-track="JXEDT_JXLB_GG_5">
+                            <img src="~/Scripts/drive/jxc_xwyd.png" alt="" srcset="">
+                        </a>
+                    </div>
+
+                </div>
+                </div>
+            </div>
+        </article>
+    </div>
+    <script src="~/Scripts/drive/hits.js"></script>
+    <link rel="stylesheet" href="~/Content/drive/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/drive/footer.css">
+    <div id="footer" onclick="clickLog('from=JXEDT_FUCENG_LIJS')" style="z-index: 999; left: -3000px;">
+        <a class="nh" target="_blank">
+            <img class="f" border="0" src="~/Scripts/drive/newfooter.png">
+        </a>
+        <img class="person-png" src="~/Scripts/drive/zhangyishan.png" alt="">
+        <a class="noheight" href="javascript:;">
+            <img class="fx" src="~/Scripts/drive/newfooterclose.png">
+        </a>
+    </div>
+
+    <ul class="right-nav-common" style="display: none;">
+        <li class="gotop">
+            <div class="gotop-icon"></div>
+            <div class="gotop-alert"><span>回到顶部</span></div>
+        </li>
+    </ul>
+    <div class="hide">
+        <div class="counterbox" style="z-index:999;">
+            <div class="table">
+                <div class="counter">
+                    <div class="person-wrap">
+                        <img src="~/Scripts/drive/zhangyishan-fx.png" alt="">
+                    </div>
+                    <div class="left">
+                        <p>驾考计算器</p>
+                        <div class="infobox">
+                            <div class="info name">
+                                <label for="name">
+                                    姓名:
+                                </label>
+                                <input type="text" id="name" name="username" placeholder="请输入您的姓名">
+                            </div>
+                            <div class="info phone">
+                                <label for="phone">
+                                    手机号码:
+                                </label>
+                                <input type="text" id="phone" name="phone" placeholder="请输入您的手机号">
+                            </div>
+                            <div class="info code">
+                                <label for="code">
+                                    验证码:
+                                </label>
+                                <input type="text" id="code" name="code" placeholder="请输入验证码">
+                                <button class="sendcode">获取验证码</button>
+                            </div>
+                            <div class="info type">
+                                <label for="type">
+                                    驾照类型:
+                                </label>
+                                <select name="" id="type">
+                                    <option value="C1">C1（小型汽车）</option>
+                                    <option value="C2">C2（小型自动挡汽车）</option>
+                                    <option value="B2">B2（大型货车）</option>
+                                    <option value="B1">B1（中型客车）</option>
+                                    <option value="A1">A1（大型客车）</option>
+                                    <option value="A2">A2（牵引车）</option>
+                                    <option value="A3">A3（城市公交车）</option>
+                                    <option value="C5">C5（残疾人专用小型自动挡载客汽车）</option>
+                                    <option value="E">E（普通二轮摩托车）</option>
+                                    <option value="C3">C3（低速载货汽车）</option>
+                                    <option value="C4">C4（三轮汽车）</option>
+                                </select>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="beginout" onclick="clickLog('from=JXEDT_FUCENG_KSJS')">
+                        <div class="beginin">
+                            开始计算
+                        </div>
+                    </div>
+                    <div class="right">
+                        <p>您的驾考预算为
+                            <span class="allmoney">?</span>元</p>
+                        <style>
+                            .moneybox p {
+                                margin: 2px 0;
+                            }
+                        </style>
+                        <div class="moneybox">
+                            <div class="money">
+                                <p>档案费</p>
+                                <p class="file">?</p>
+                                <p>元</p>
+                            </div>
+                            <div class="money">
+                                <p>拍照费</p>
+                                <p class="photo">?</p>
+                                <p>元</p>
+                            </div>
+                            <div class="money">
+                                <p>考试费</p>
+                                <p class="exam">?</p>
+                                <p>元</p>
+                            </div>
+                            <div class="money">
+                                <p>体检费</p>
+                                <p class="health">?</p>
+                                <p>元</p>
+                            </div>
+                            <div class="money">
+                                <p>驾校培训费</p>
+                                <p class="train">?</p>
+                                <p>元</p>
+                            </div>
+                            <div class="money">
+                                <p>驾驶证工本费</p>
+                                <p class="papers">?</p>
+                                <p>元</p>
+                            </div>
+                            <div class="money">
+                                <p>补考费</p>
+                                <p class="make-up">?</p>
+                                <p>元</p>
+                            </div>
+                        </div>
+                        <div class="goto">
+                            <a href="http://jiaxiao.jxedt.com/" onclick="clickLog('from=JXEDT_FUCENG_QTJXBJ')">去看看驾校报价</a>
+                        </div>
+                    </div>
+                    <div class="counterclose">
+                        <img src="~/Scripts/drive/counterclose.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+
+  <footer class="comment-footer">
+<div class="comment-footer-external">
+    <div class="external-header">
+        <span class="external-header-span">
+            <a data-external="external" href="javascript:void(0);" class="active_footer">友情链接</a>
+        </span>
+        <span>
+            <a data-external="hot" href="javascript:void(0);">热门驾校</a>
+        </span>
+        @* <span> *@
+        @*     <a data-external="difficult" href="javascript:void(0);">驾校疑难解答</a> *@
+        @* </span> *@
+        <!--<span>
+            <a data-external="recommend" href="javascript:void(0);">推荐驾校</a>
+        </span>-->
+    </div>
+    <!-- <div class="external-centext-tab"> -->
+    <div class="external-centext" style="display: block;">
+        <span>
+            <a href="http://baa.bitauto.com/" title="汽车论坛" target="_blank">汽车论坛</a> </span>
+        <span>
+            <a href="http://qiche.cncn.com/" title="长途汽车查询" target="_blank">长途汽车查询</a> </span>
+        <span>
+            <a href="http://www.xincheping.com/" title="新车评网" target="_blank">新车评网</a> </span>
+        <span>
+            <a href="http://www.tangdou.com/" title="糖豆网" target="_blank">糖豆网</a> </span>
+        <span>
+            <a href="http://www.niuche.com/" title="牛车网" target="_blank">牛车网</a> </span>
+        <span>
+            <a href="http://www.cnhuadong.net/" title="华东在线" target="_blank">华东在线</a> </span>
+        <span>
+            <a href="http://jzwcom.com/" title="记者网" target="_blank">记者网</a> </span>
+        <span>
+            <a href="http://hz.ganji.com/" title="杭州赶集网" target="_blank">杭州赶集网</a> </span>
+        <span>
+            <a href="http://www.bitauto.com/" title="汽车" target="_blank">汽车</a> </span>
+        <span>
+            <a href="http://che.315che.com/" title="车型大全" target="_blank">车型大全</a> </span>
+        <span>
+            <a href="http://www.d1ev.com/" title="电动汽车" target="_blank">电动汽车</a> </span>
+        <span>
+            <a href="http://www.qichezhan.cn/" title="汽车票查询" target="_blank">汽车票查询</a> </span>
+        <span>
+            <a href="http://www.gaibar.com/" title="改装" target="_blank">改装</a> </span>
+        <span>
+            <a href="http://www.auto.hc360.com/" title="慧聪汽车网" target="_blank">慧聪汽车网</a> </span>
+        <span>
+            <a href="http://sjz.focus.cn/" title="石家庄房产" target="_blank">石家庄房产</a> </span>
+        <span>
+            <a href="http://jipiao.ly.com/" title="机票查询" target="_blank">机票查询</a> </span>
+        <span>
+            <a href="http://car.xgo.com.cn/" title="如何选车" target="_blank">如何选车</a> </span>
+        <span>
+            <a href="http://dealer.bitauto.com/" title="汽车4S店" target="_blank">汽车4S店</a> </span>
+        <span>
+            <a href="http://post.8684.cn/" title="邮政编码查询" target="_blank">邮政编码查询</a> </span>
+        <span>
+            <a href="http://www.qqbaobao.com/" title="亲宝网" target="_blank">亲宝网</a> </span>
+        <span>
+            <a href="http://www.china2car.com/" title="全纳二手车网" target="_blank">全纳二手车网</a> </span>
+        <span>
+            <a href="http://job.dajie.com/" title="找工作" target="_blank">找工作</a> </span>
+        <span>
+            <a href="http://chaiche.chexun.com/" title="拆车坊" target="_blank">拆车坊</a> </span>
+        <span>
+            <a href="http://car.bitauto.com/" title="汽车大全" target="_blank">汽车大全</a> </span>
+        <span>
+            <a href="http://news.xgo.com.cn/" title="点评新闻" target="_blank">点评新闻</a> </span>
+        <span>
+            <a href="http://news.gaotie.cn/" title="高速铁路" target="_blank">高速铁路</a> </span>
+        <span>
+            <a href="http://www.wenzhousx.com/" title="视线" target="_blank">视线</a> </span>
+        <span>
+            <a href="http://www.qianlima.com/" title="千里马招标网" target="_blank">千里马招标网</a> </span>
+        <span>
+            <a href="http://www.cnpickups.com/" title="皮卡车大全" target="_blank">皮卡车大全</a> </span>
+        <span>
+            <a href="http://www.61baobao.com/" title="儿歌" target="_blank">儿歌</a> </span>
+        <span>
+            <a href="http://news.szhk.com/" title="最新新闻" target="_blank">最新新闻</a> </span>
+        <span>
+            <a href="http://tuanche.com/" title="汽车团购" target="_blank">汽车团购</a> </span>
+        <span>
+            <a href="http://www.cheping.com.cn/" title="车评网" target="_blank">车评网</a> </span>
+        <span>
+            <a href="http://db.auto.sina.com.cn/" title="车型大全" target="_blank">车型大全</a> </span>
+
+
+    </div>
+
+    <div class="external-centext" id="hotareaid">
+
+        <span><a rulname="北京" urlpath="/bj/" href="http://jiaxiao.jxedt.com/bj/" target="_blank" title="北京驾校">北京驾校</a></span>
+        <span><a rulname="天津" urlpath="/tj/" href="http://jiaxiao.jxedt.com/tj/" target="_blank" title="天津驾校">天津驾校</a></span>
+        <span><a rulname="上海" urlpath="/sh/" href="http://jiaxiao.jxedt.com/sh/" target="_blank" title="上海驾校">上海驾校</a></span>
+        <span><a rulname="重庆" urlpath="/cq/" href="http://jiaxiao.jxedt.com/cq/" target="_blank" title="重庆驾校">重庆驾校</a></span>
+        <span>
+            <a rulname="杭州" urlpath="/hangzhou/" href="http://jiaxiao.jxedt.com/hangzhou/" target="_blank"
+               title="杭州驾校">杭州驾校</a></span>
+        <span><a rulname="宁波" urlpath="/ningbo/" href="http://jiaxiao.jxedt.com/ningbo/" target="_blank" title="宁波驾校">宁波驾校</a></span>
+        <span>
+            <a rulname="南京" urlpath="/nanjing/" href="http://jiaxiao.jxedt.com/nanjing/" target="_blank"
+               title="南京驾校">南京驾校</a></span>
+        <span><a rulname="苏州" urlpath="/suzhou/" href="http://jiaxiao.jxedt.com/suzhou/" target="_blank" title="苏州驾校">苏州驾校</a></span>
+        <span>
+            <a rulname="长春" urlpath="/changchun/" href="http://jiaxiao.jxedt.com/changchun/" target="_blank"
+               title="长春驾校">长春驾校</a></span>
+        <span><a rulname="石家庄" urlpath="/sjz/" href="http://jiaxiao.jxedt.com/sjz/" target="_blank" title="石家庄驾校">石家庄驾校</a></span>
+        <span><a rulname="济南" urlpath="/jinan/" href="http://jiaxiao.jxedt.com/jinan/" target="_blank" title="济南驾校">济南驾校</a></span>
+        <span>
+            <a rulname="青岛" urlpath="/qingdao/" href="http://jiaxiao.jxedt.com/qingdao/" target="_blank"
+               title="青岛驾校">青岛驾校</a></span>
+        <span><a rulname="福州" urlpath="/fuzhou/" href="http://jiaxiao.jxedt.com/fuzhou/" target="_blank" title="福州驾校">福州驾校</a></span>
+        <span><a rulname="厦门" urlpath="/xiamen/" href="http://jiaxiao.jxedt.com/xiamen/" target="_blank" title="厦门驾校">厦门驾校</a></span>
+        <span>
+            <a rulname="广州" urlpath="/guangzhou/" href="http://jiaxiao.jxedt.com/guangzhou/" target="_blank"
+               title="广州驾校">广州驾校</a></span>
+        <span>
+            <a rulname="深圳" urlpath="/shenzhen/" href="http://jiaxiao.jxedt.com/shenzhen/" target="_blank"
+               title="深圳驾校">深圳驾校</a></span>
+        <span>
+            <a rulname="南宁" urlpath="/nanning/" href="http://jiaxiao.jxedt.com/nanning/" target="_blank"
+               title="南宁驾校">南宁驾校</a></span>
+        <span><a rulname="海口" urlpath="/haikou/" href="http://jiaxiao.jxedt.com/haikou/" target="_blank" title="海口驾校">海口驾校</a></span>
+        <span><a rulname="哈尔滨" urlpath="/heb/" href="http://jiaxiao.jxedt.com/heb/" target="_blank" title="哈尔滨驾校">哈尔滨驾校</a></span>
+        <span><a rulname="乌鲁木齐" urlpath="/wlmq/" href="http://jiaxiao.jxedt.com/wlmq/" target="_blank" title="乌鲁木齐驾校">乌鲁木齐驾校</a></span>
+        <span>
+            <a rulname="武汉" urlpath="/changsha/" href="http://jiaxiao.jxedt.com/changsha/" target="_blank"
+               title="长沙驾校">长沙驾校</a></span>
+        <span>
+            <a rulname="南昌" urlpath="/nanchang/" href="http://jiaxiao.jxedt.com/nanchang/" target="_blank"
+               title="南昌驾校">南昌驾校</a></span>
+        <span><a rulname="合肥" urlpath="/hefei/" href="http://jiaxiao.jxedt.com/hefei/" target="_blank" title="合肥驾校">合肥驾校</a></span>
+        <span>
+            <a rulname="郑州" urlpath="/zhengzhou/" href="http://jiaxiao.jxedt.com/zhengzhou/" target="_blank"
+               title="郑州驾校">郑州驾校</a></span>
+        <span>
+            <a rulname="成都" urlpath="/chengdu/" href="http://jiaxiao.jxedt.com/chengdu/" target="_blank"
+               title="成都驾校">成都驾校</a></span>
+        <span>
+            <a rulname="昆明" urlpath="/kunming/" href="http://jiaxiao.jxedt.com/kunming/" target="_blank"
+               title="昆明驾校">昆明驾校</a></span>
+        <span>
+            <a rulname="贵阳" urlpath="/guiyang/" href="http://jiaxiao.jxedt.com/guiyang/" target="_blank"
+               title="贵阳驾校">贵阳驾校</a></span>
+        <span><a rulname="呼和浩特" urlpath="/hhht/" href="http://jiaxiao.jxedt.com/hhht/" target="_blank" title="呼和浩特驾校">呼和浩特驾校</a></span>
+        <span><a rulname="大连" urlpath="/dalian/" href="http://jiaxiao.jxedt.com/dalian/" target="_blank" title="大连驾校">大连驾校</a></span>
+        <span> <a rulname="拉萨" urlpath="/lasa/" href="http://jiaxiao.jxedt.com/lasa/" target="_blank" title="拉萨驾校">拉萨驾校</a></span>
+        <span><a rulname="西安" urlpath="/xian/" href="http://jiaxiao.jxedt.com/xian/" target="_blank" title="西安驾校">西安驾校</a></span>
+        <span>
+            <a rulname="银川" urlpath="/yinchuan/" href="http://jiaxiao.jxedt.com/yinchuan/" target="_blank"
+               title="银川驾校">银川驾校</a></span>
+        <span>
+            <a rulname="太原" urlpath="/taiyuan/" href="http://jiaxiao.jxedt.com/taiyuan/" target="_blank"
+               title="太原驾校">太原驾校</a></span>
+        <span><a rulname="西宁" urlpath="/xining/" href="http://jiaxiao.jxedt.com/xining/" target="_blank" title="西宁驾校">西宁驾校</a></span>
+        <span>
+            <a rulname="兰州" urlpath="/lanzhou/" href="http://jiaxiao.jxedt.com/lanzhou/" target="_blank"
+               title="兰州驾校">兰州驾校</a></span>
+        <span>
+            <a rulname="沈阳" urlpath="/shenyang/" href="http://jiaxiao.jxedt.com/shenyang/" target="_blank"
+               title="沈阳驾校">沈阳驾校</a></span>
+
+
+
+
+    </div>
+
+
+</div>
+@* <div class="comment-footer-about"> *@
+@*     <div class="row comment-footer-logo"> *@
+@*         <div> *@
+@*             <div class="comment-footer-image"> *@
+@*                 $1$ <img src="~/Scripts/drive/logo.png" alt=""> #1# *@
+@*             </div> *@
+@*             <div class="comment-footer-describe"> *@
+@*                 $1$ <span>58赶集集团旗下网站</span> #1# *@
+@*             </div> *@
+@*         </div> *@
+@*     </div> *@
+    @* <div class="row"> *@
+    @*     <div class="row comment-footer-web"> *@
+    @*         <a href="http://www.jxedt.com/about/jianjie.asp" target="_blank">网站介绍</a> *@
+    @*         <span>|</span> *@
+    @*         <a href="http://www.jxedt.com/about/sitemap.asp" target="_blank">网站地图</a> *@
+    @*         <span>|</span> *@
+    @*         <a href="http://www.jxedt.com/about/link.asp" target="_blank">合作链接</a> *@
+    @*         <span>|</span> *@
+    @*         <a href="http://www.jxedt.com/about/laws.asp" target="_blank">免责声明</a> *@
+    @*         <span>|</span> *@
+    @*         <a href="http://www.jxedt.com/help.asp" target="_blank">用户帮助</a> *@
+    @*         <span>|</span> *@
+    @*         <a href="http://www.jxedt.com/about/lianxi.asp" target="_blank">联系我们</a> *@
+    @*     </div> *@
+    @*     <div class="row"> *@
+    @*         <a href="http://www.jxedt.com/" target="_blank">驾校一点通 （ www.jxedt.com ）旗下平台 ：</a> *@
+    @*         <a href="http://jiaxiao.jxedt.com/" target="_blank">驾校平台</a> *@
+    @*         <a href="http://jl.jxedt.com/" target="_blank">教练平台</a> *@
+    @*         <a href="http://pl.jxedt.com/" target="_blank">陪练平台</a> *@
+    @*         <a href="http://kaoshi.jxedt.com/" target="_blank">考试平台</a> *@
+    @*         <a href="http://www.jxedt.com/about/" target="_blank">手机版</a> *@
+    @*     </div> *@
+    @*     <div class="row"> *@
+    @*         <p class="comment-footer-org">杭州联桥网络科技有限公司 浙ICP备09002072</p> *@
+    @*     </div> *@
+    @* </div> *@
+    @* <div class="row"> *@
+    @*     <div> *@
+    @*         <img src="~/Scripts/drive/app_code.png" alt=""> *@
+    @*     </div> *@
+    @*     <div> *@
+    @*         <p class="comment-footer-app">驾校一点通APP</p> *@
+    @*     </div> *@
+    @* </div> *@
+@* </div> *@
+</footer>
+  
+
+@section body_footer_scripts
+{
+      <script>
+          function linkclick(obj) {
+              if ($(obj).attr("data-track")) {
+                  hit($(obj).attr("data-track"));
+              }
+              var baseurl = ""
+              switch (obj.getAttribute("linkrul")) {
+                  case "jiaxiao":
+                      baseurl = "http://jiaxiao.jxedt.com";
+                      break;
+                  case "jl":
+                      baseurl = "http://jl.jxedt.com";
+                      break;
+                  case "pl":
+                      baseurl = "http://pl.jxedt.com";
+                      break;
+                  default:
+                      baseurl = "http:www.jxedt.com"
+              }
+              var afterurl = cookie.get("local_city_pingying");
+              if (null == afterurl) {
+                  afterurl = "";
+              }
+              obj.href = baseurl + afterurl;
+          }
+      </script>
+      @Scripts.Render()
+      <script src="~/Scripts/drive/footer.js"></script>
+      <script src="~/Scripts/drive/common_footer.js"></script>
+      <script>
+          //添加本地存储信息
+          //          $("#hotareaid>span>a").click(function () {
+          //              var baseurl = this.getAttribute("urlpath");
+          //              var basename = this.getAttribute("rulname");
+          //              cookie.set("local_city", basename);
+          //              cookie.set("local_city_pingying", baseurl);
+          //          });
+//          $(function () {
+//
+//              $('#logout').click(function () {
+//                  $('#logoutForm').submit();
+//              });
+//          });
+
+      </script>
+  }
+
+

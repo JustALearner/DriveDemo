@@ -1,0 +1,5 @@
+D:\传智讲课\0413班\OA\OA项目，第一天Asp.netMVC原理，框架搭建\CZBK.ItcastOA\CZBK.ItcastOA.Common\bin\Debug\CZBK.ItcastOA.Common.dll
+D:\传智讲课\0413班\OA\OA项目，第一天Asp.netMVC原理，框架搭建\CZBK.ItcastOA\CZBK.ItcastOA.Common\bin\Debug\CZBK.ItcastOA.Common.pdb
+D:\传智讲课\0413班\OA\OA项目，第一天Asp.netMVC原理，框架搭建\CZBK.ItcastOA\CZBK.ItcastOA.Common\obj\Debug\CZBK.ItcastOA.Common.csprojResolveAssemblyReference.cache
+D:\传智讲课\0413班\OA\OA项目，第一天Asp.netMVC原理，框架搭建\CZBK.ItcastOA\CZBK.ItcastOA.Common\obj\Debug\CZBK.ItcastOA.Common.dll
+D:\传智讲课\0413班\OA\OA项目，第一天Asp.netMVC原理，框架搭建\CZBK.ItcastOA\CZBK.ItcastOA.Common\obj\Debug\CZBK.ItcastOA.Common.pdb

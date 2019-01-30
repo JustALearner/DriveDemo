@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="drivingModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="T_Sys_Oper_Log">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserCode" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" />
+    <Property Name="LogType" Type="varchar" MaxLength="20" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="Content" Type="varchar" MaxLength="4000" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“driving.dbo.T_Sys_Role”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="T_Sys_Role">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="usercode" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="usercode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="role" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="T_Sys_User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserCode" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+    <Property Name="UserType" Type="varchar" MaxLength="5" />
+    <Property Name="Telephone" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="drivingModelStoreContainer">
+    <EntitySet Name="T_Sys_Oper_Log" EntityType="Self.T_Sys_Oper_Log" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Sys_User" EntityType="Self.T_Sys_User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Sys_Role" EntityType="Self.T_Sys_Role" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [T_Sys_Role].[id] AS [id], 
+    [T_Sys_Role].[usercode] AS [usercode], 
+    [T_Sys_Role].[role] AS [role]
+    FROM [dbo].[T_Sys_Role] AS [T_Sys_Role]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

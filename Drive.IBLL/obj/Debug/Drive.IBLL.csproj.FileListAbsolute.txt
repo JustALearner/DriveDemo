@@ -1,0 +1,24 @@
+F:\TestProjects\Drive\CZBK.ItcastOA.IBLL\bin\Debug\Drive.IBLL.dll
+F:\TestProjects\Drive\CZBK.ItcastOA.IBLL\bin\Debug\Drive.IBLL.pdb
+F:\TestProjects\Drive\CZBK.ItcastOA.IBLL\bin\Debug\Drive.IDAL.dll
+F:\TestProjects\Drive\CZBK.ItcastOA.IBLL\bin\Debug\Drive.Model.dll
+F:\TestProjects\Drive\CZBK.ItcastOA.IBLL\bin\Debug\EntityFramework.dll
+F:\TestProjects\Drive\CZBK.ItcastOA.IBLL\bin\Debug\Drive.IDAL.pdb
+F:\TestProjects\Drive\CZBK.ItcastOA.IBLL\bin\Debug\Drive.Model.pdb
+F:\TestProjects\Drive\CZBK.ItcastOA.IBLL\bin\Debug\EntityFramework.xml
+F:\TestProjects\Drive\CZBK.ItcastOA.IBLL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+F:\TestProjects\Drive\CZBK.ItcastOA.IBLL\obj\Debug\Drive.IBLL.csprojResolveAssemblyReference.cache
+F:\TestProjects\Drive\CZBK.ItcastOA.IBLL\obj\Debug\Drive.IBLL.dll
+F:\TestProjects\Drive\CZBK.ItcastOA.IBLL\obj\Debug\Drive.IBLL.pdb
+E:\Visual Studio 2012\Projects\Drive\Drive.IBLL\bin\Debug\Drive.IBLL.dll
+E:\Visual Studio 2012\Projects\Drive\Drive.IBLL\bin\Debug\Drive.IBLL.pdb
+E:\Visual Studio 2012\Projects\Drive\Drive.IBLL\bin\Debug\Drive.IDAL.dll
+E:\Visual Studio 2012\Projects\Drive\Drive.IBLL\bin\Debug\Drive.Model.dll
+E:\Visual Studio 2012\Projects\Drive\Drive.IBLL\bin\Debug\EntityFramework.dll
+E:\Visual Studio 2012\Projects\Drive\Drive.IBLL\bin\Debug\Drive.IDAL.pdb
+E:\Visual Studio 2012\Projects\Drive\Drive.IBLL\bin\Debug\Drive.Model.pdb
+E:\Visual Studio 2012\Projects\Drive\Drive.IBLL\bin\Debug\EntityFramework.xml
+E:\Visual Studio 2012\Projects\Drive\Drive.IBLL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\Visual Studio 2012\Projects\Drive\Drive.IBLL\obj\Debug\Drive.IBLL.csprojResolveAssemblyReference.cache
+E:\Visual Studio 2012\Projects\Drive\Drive.IBLL\obj\Debug\Drive.IBLL.dll
+E:\Visual Studio 2012\Projects\Drive\Drive.IBLL\obj\Debug\Drive.IBLL.pdb

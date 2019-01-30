@@ -1,0 +1,8 @@
+F:\TestProjects\Drive\CZBK.ItcastOA.Common\bin\Debug\Drive.Common.dll
+F:\TestProjects\Drive\CZBK.ItcastOA.Common\bin\Debug\Drive.Common.pdb
+F:\TestProjects\Drive\CZBK.ItcastOA.Common\obj\Debug\Drive.Common.dll
+F:\TestProjects\Drive\CZBK.ItcastOA.Common\obj\Debug\Drive.Common.pdb
+E:\Visual Studio 2012\Projects\Drive\Drive.Common\bin\Debug\Drive.Common.dll
+E:\Visual Studio 2012\Projects\Drive\Drive.Common\bin\Debug\Drive.Common.pdb
+E:\Visual Studio 2012\Projects\Drive\Drive.Common\obj\Debug\Drive.Common.dll
+E:\Visual Studio 2012\Projects\Drive\Drive.Common\obj\Debug\Drive.Common.pdb

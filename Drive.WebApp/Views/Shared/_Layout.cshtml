@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--[if IE]> <meta name="renderer" content="webkit"><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8">   
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/drive/reset.css")
+    @Scripts.Render("~/Scripts/drive/jquery.1.12.4.js")
+    @Styles.Render("~/Content/drive/comm_style.css")
+    @RenderSection("head_script",false)
+    @RenderSection("head_style",false)
+
+</head>
+<body>
+@RenderSection("body_header_style",false)
+<div class="nav-wrap">
+    <nav class="comment-header-nav">
+        <!-- 联系 -->
+        <div class="comment-header-contact">
+            <div class="comment-header-left">           
+                <div class="comment-login-1" style="display:inline-block;">
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        using (Html.BeginForm("Logout", "Account", FormMethod.Post, new { id = "logoutForm" }))
+                        {
+                            //@Html.AntiForgeryToken()
+                         
+                            <span class="btn-span">  <a href="javascript:;">Hello, @User.Identity.Name</a></span>
+@*                             <span class="btn-span"> <a href="javascript:;" id="logout">退出系统</a></span> *@
+                            <span class="btn-span">@Html.ActionLink("退出系统", "Logout", "Account") </span>
+
+                         
+                        }
+                    }
+                    else
+                    {
+@*                         <span class="btn-span"><a href="http://user.jxedt.com/home/login" onclick="clickLog('from=JXEDT_HEADER_LOGIN')">登录</a></span> *@
+@*                         <span class="btn-span"><a href="http://user.jxedt.com/registerNew/xy" target="_blank" onclick="clickLog('from=JXEDT_HEADER_SIGNIN')">注册</a></span> *@
+                        <span class="btn-span">@Html.ActionLink("登录", "Login", "Account")</span>
+                        <span class="btn-span">@Html.ActionLink("注册", "Register", "Account")</span>
+                    }
+                  
+                </div>
+            </div>
+            <div class="comment-header-right">
+                                           
+                <a class="right-text" target="_blank" href="/Home/queryOperLog">驾校后台</a>
+            </div>
+        </div>       
+    </nav>
+</div>
+@RenderBody()
+
+
+
+
+@RenderSection("body_footer_scripts", required: false)
+</body>
+</html>

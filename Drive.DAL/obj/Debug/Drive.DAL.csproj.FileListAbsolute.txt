@@ -1,0 +1,32 @@
+F:\TestProjects\Drive\CZBK.ItcastOA.DAL\bin\Debug\Drive.DAL.dll.config
+F:\TestProjects\Drive\CZBK.ItcastOA.DAL\bin\Debug\Drive.DAL.dll
+F:\TestProjects\Drive\CZBK.ItcastOA.DAL\bin\Debug\Drive.DAL.pdb
+F:\TestProjects\Drive\CZBK.ItcastOA.DAL\bin\Debug\Drive.IDAL.dll
+F:\TestProjects\Drive\CZBK.ItcastOA.DAL\bin\Debug\Drive.Model.dll
+F:\TestProjects\Drive\CZBK.ItcastOA.DAL\bin\Debug\EntityFramework.dll
+F:\TestProjects\Drive\CZBK.ItcastOA.DAL\bin\Debug\EntityFramework.SqlServer.dll
+F:\TestProjects\Drive\CZBK.ItcastOA.DAL\bin\Debug\Drive.IDAL.pdb
+F:\TestProjects\Drive\CZBK.ItcastOA.DAL\bin\Debug\Drive.Model.pdb
+F:\TestProjects\Drive\CZBK.ItcastOA.DAL\bin\Debug\EntityFramework.xml
+F:\TestProjects\Drive\CZBK.ItcastOA.DAL\bin\Debug\EntityFramework.SqlServer.xml
+F:\TestProjects\Drive\CZBK.ItcastOA.DAL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+F:\TestProjects\Drive\CZBK.ItcastOA.DAL\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+F:\TestProjects\Drive\CZBK.ItcastOA.DAL\obj\Debug\Drive.DAL.csprojResolveAssemblyReference.cache
+F:\TestProjects\Drive\CZBK.ItcastOA.DAL\obj\Debug\Drive.DAL.dll
+F:\TestProjects\Drive\CZBK.ItcastOA.DAL\obj\Debug\Drive.DAL.pdb
+E:\Visual Studio 2012\Projects\Drive\Drive.DAL\bin\Debug\Drive.DAL.dll.config
+E:\Visual Studio 2012\Projects\Drive\Drive.DAL\bin\Debug\Drive.DAL.dll
+E:\Visual Studio 2012\Projects\Drive\Drive.DAL\bin\Debug\Drive.DAL.pdb
+E:\Visual Studio 2012\Projects\Drive\Drive.DAL\bin\Debug\Drive.IDAL.dll
+E:\Visual Studio 2012\Projects\Drive\Drive.DAL\bin\Debug\Drive.Model.dll
+E:\Visual Studio 2012\Projects\Drive\Drive.DAL\bin\Debug\EntityFramework.dll
+E:\Visual Studio 2012\Projects\Drive\Drive.DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\Visual Studio 2012\Projects\Drive\Drive.DAL\bin\Debug\Drive.IDAL.pdb
+E:\Visual Studio 2012\Projects\Drive\Drive.DAL\bin\Debug\Drive.Model.pdb
+E:\Visual Studio 2012\Projects\Drive\Drive.DAL\bin\Debug\EntityFramework.xml
+E:\Visual Studio 2012\Projects\Drive\Drive.DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\Visual Studio 2012\Projects\Drive\Drive.DAL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\Visual Studio 2012\Projects\Drive\Drive.DAL\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+E:\Visual Studio 2012\Projects\Drive\Drive.DAL\obj\Debug\Drive.DAL.csprojResolveAssemblyReference.cache
+E:\Visual Studio 2012\Projects\Drive\Drive.DAL\obj\Debug\Drive.DAL.dll
+E:\Visual Studio 2012\Projects\Drive\Drive.DAL\obj\Debug\Drive.DAL.pdb
