@@ -719,7 +719,7 @@
     $(document).ready(function(){
         $(".page-warp a").each(function (index) {
             console.log($(".page-warp a"));
-            $("a").eq(index).click(function(){
+            $("a").eq(index).click(function(){ 
                 $(".page-warp a").removeClass("active");
                 $(this).addClass("active");
             });
