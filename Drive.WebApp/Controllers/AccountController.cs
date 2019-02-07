@@ -74,7 +74,7 @@ namespace Drive.WebApp.Controllers
 
                 //  return RedirectToAction("Index", new RouteValueDictionary(new { controller = "Home", action = "Index" }));
                 System.Web.HttpContext.Current.Session["user_account"] = new T_Sys_User { UserCode="admin"};
-                return Json(new { code = 0, url = "/Home/Index", msg = "" });
+                return Json(new { code = 0, url = "/Home/IndexNew", msg = "" });
               
             }
             else
@@ -101,7 +101,7 @@ namespace Drive.WebApp.Controllers
                 FormsAuthentication.SetAuthCookie(user.UserCode, true);
                 //将用户实体保存到Session中
                 System.Web.HttpContext.Current.Session["user_account"] = user;
-                return Json(new { code = 0, url = "/Home/Index", msg = "" });
+                return Json(new { code = 0, url = "/Home/IndexNew", msg = "" });
 
             }
 
@@ -162,7 +162,7 @@ namespace Drive.WebApp.Controllers
                 dic["UserCode"] = d.UserCode;
                 dic["UserName"] = d.UserName;
                 dic["LogType"] = d.LogType;
-                DateTime date = d.CreateTime;
+                DateTime date = d.CreateTime.Value;
                 dic["CreateTime"] = date.ToString("yyyy-MM-dd HH:mm:ss");
                 dic["Content"] = d.Content;
                 rs.Add(dic);

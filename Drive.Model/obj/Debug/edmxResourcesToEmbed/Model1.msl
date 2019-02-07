@@ -2,7 +2,7 @@
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="drivingModelStoreContainer" CdmEntityContainer="drivingEntities">
     <EntitySetMapping Name="T_Sys_Oper_Log">
-      <EntityTypeMapping TypeName="drivingModel.T_Sys_Oper_Log">
+      <EntityTypeMapping TypeName="IsTypeOf(drivingModel.T_Sys_Oper_Log)">
         <MappingFragment StoreEntitySet="T_Sys_Oper_Log">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="UserCode" ColumnName="UserCode" />
@@ -14,7 +14,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="T_Sys_User">
-      <EntityTypeMapping TypeName="drivingModel.T_Sys_User">
+      <EntityTypeMapping TypeName="IsTypeOf(drivingModel.T_Sys_User)">
         <MappingFragment StoreEntitySet="T_Sys_User">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="UserCode" ColumnName="UserCode" />
@@ -26,11 +26,11 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="T_Sys_Role">
-      <EntityTypeMapping TypeName="drivingModel.T_Sys_Role">
+      <EntityTypeMapping TypeName="IsTypeOf(drivingModel.T_Sys_Role)">
         <MappingFragment StoreEntitySet="T_Sys_Role">
-          <ScalarProperty Name="role" ColumnName="role" />
-          <ScalarProperty Name="usercode" ColumnName="usercode" />
           <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="usercode" ColumnName="usercode" />
+          <ScalarProperty Name="role" ColumnName="role" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

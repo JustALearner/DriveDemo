@@ -22,3 +22,19 @@ E:\Visual Studio 2012\Projects\Drive\Drive.IBLL\bin\Debug\zh-Hans\EntityFramewor
 E:\Visual Studio 2012\Projects\Drive\Drive.IBLL\obj\Debug\Drive.IBLL.csprojResolveAssemblyReference.cache
 E:\Visual Studio 2012\Projects\Drive\Drive.IBLL\obj\Debug\Drive.IBLL.dll
 E:\Visual Studio 2012\Projects\Drive\Drive.IBLL\obj\Debug\Drive.IBLL.pdb
+D:\repos\DriveDemo\Drive.IBLL\bin\Debug\Drive.IBLL.dll
+D:\repos\DriveDemo\Drive.IBLL\bin\Debug\Drive.IBLL.pdb
+D:\repos\DriveDemo\Drive.IBLL\bin\Debug\Drive.IDAL.dll
+D:\repos\DriveDemo\Drive.IBLL\bin\Debug\Drive.Model.dll
+D:\repos\DriveDemo\Drive.IBLL\bin\Debug\EntityFramework.dll
+D:\repos\DriveDemo\Drive.IBLL\bin\Debug\Drive.IDAL.pdb
+D:\repos\DriveDemo\Drive.IBLL\bin\Debug\Drive.IDAL.dll.config
+D:\repos\DriveDemo\Drive.IBLL\bin\Debug\Drive.Model.pdb
+D:\repos\DriveDemo\Drive.IBLL\bin\Debug\Drive.Model.dll.config
+D:\repos\DriveDemo\Drive.IBLL\bin\Debug\EntityFramework.xml
+D:\repos\DriveDemo\Drive.IBLL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\repos\DriveDemo\Drive.IBLL\obj\Debug\Drive.IBLL.csprojAssemblyReference.cache
+D:\repos\DriveDemo\Drive.IBLL\obj\Debug\Drive.IBLL.csproj.CoreCompileInputs.cache
+D:\repos\DriveDemo\Drive.IBLL\obj\Debug\Drive.IBLL.csproj.CopyComplete
+D:\repos\DriveDemo\Drive.IBLL\obj\Debug\Drive.IBLL.dll
+D:\repos\DriveDemo\Drive.IBLL\obj\Debug\Drive.IBLL.pdb

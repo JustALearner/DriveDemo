@@ -1,21 +1,13 @@
 ﻿@{
     ViewBag.Title = "登录";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
-@section head_style{
-    <link rel="stylesheet" href="~/Content/drive/registration/registration.css">
-    <link rel="stylesheet" href="~/Content/drive/registration/font_949786_v8zsbvaxz6p.css">
+    Layout = null;
 }
 
-@* <h2>Login</h2> *@
-@* @using (Html.BeginForm()) *@
-@* { *@
-@*     @Html.AntiForgeryToken() *@
-@* *@
-@*     <input type="text" name="UserName" /> *@
-@*     <input type="password" name="Password" /> *@
-@*     <input type="submit" value="登录" /> *@
-@* } *@
+    <link rel="stylesheet" href="~/Content/drive/registration/registration.css">
+    <link rel="stylesheet" href="~/Content/drive/registration/font_949786_v8zsbvaxz6p.css">
+@Styles.Render("~/Content/drive/reset.css")
+@Scripts.Render("~/Scripts/drive/jquery.1.12.4.js")
+@Styles.Render("~/Content/drive/comm_style.css")
 
 <style>
     .header-wrap{
@@ -103,12 +95,12 @@
         position: relative;
     }
     .comment-header-app:hover {
-         color: #00c356;
-         background-color: #fff;
-         /* border-color: #E5E5E5; */
-         box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
-         /* border: none; */
-         /*border: 1px solid #E5E5E5;*/
+        color: #00c356;
+        background-color: #fff;
+        /* border-color: #E5E5E5; */
+        box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+        /* border: none; */
+        /*border: 1px solid #E5E5E5;*/
     }
     .comment-header-app:hover .down-popup{
         display: inline-block;
@@ -148,6 +140,8 @@
         color: #00c356;
     }
 </style>
+<html>
+<body>
 <article class="login-guide-main">
     <div class="jx-register">
         @* <div class="jx-register-img"> *@
@@ -193,8 +187,10 @@
         </div>
     </div>
 </article>
-@section body_footer_scripts{
+
     <script src="~/Scripts/drive/Registration/login.js"></script>
     <script src="~/Scripts/drive/Registration/load.min.js"></script>
     <script src="~/Scripts/drive/Registration/isd_captcha.js"></script>
-}
+
+</body>
+</html>

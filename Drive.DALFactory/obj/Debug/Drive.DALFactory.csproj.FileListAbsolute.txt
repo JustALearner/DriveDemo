@@ -34,3 +34,26 @@ E:\Visual Studio 2012\Projects\Drive\Drive.DALFactory\bin\Debug\zh-Hans\EntityFr
 E:\Visual Studio 2012\Projects\Drive\Drive.DALFactory\obj\Debug\Drive.DALFactory.csprojResolveAssemblyReference.cache
 E:\Visual Studio 2012\Projects\Drive\Drive.DALFactory\obj\Debug\Drive.DALFactory.dll
 E:\Visual Studio 2012\Projects\Drive\Drive.DALFactory\obj\Debug\Drive.DALFactory.pdb
+D:\repos\DriveDemo\Drive.DALFactory\bin\Debug\Drive.DALFactory.dll.config
+D:\repos\DriveDemo\Drive.DALFactory\bin\Debug\Drive.DALFactory.dll
+D:\repos\DriveDemo\Drive.DALFactory\bin\Debug\Drive.DALFactory.pdb
+D:\repos\DriveDemo\Drive.DALFactory\bin\Debug\Drive.DAL.dll
+D:\repos\DriveDemo\Drive.DALFactory\bin\Debug\Drive.IDAL.dll
+D:\repos\DriveDemo\Drive.DALFactory\bin\Debug\Drive.Model.dll
+D:\repos\DriveDemo\Drive.DALFactory\bin\Debug\EntityFramework.dll
+D:\repos\DriveDemo\Drive.DALFactory\bin\Debug\EntityFramework.SqlServer.dll
+D:\repos\DriveDemo\Drive.DALFactory\bin\Debug\Drive.DAL.pdb
+D:\repos\DriveDemo\Drive.DALFactory\bin\Debug\Drive.DAL.dll.config
+D:\repos\DriveDemo\Drive.DALFactory\bin\Debug\Drive.IDAL.pdb
+D:\repos\DriveDemo\Drive.DALFactory\bin\Debug\Drive.IDAL.dll.config
+D:\repos\DriveDemo\Drive.DALFactory\bin\Debug\Drive.Model.pdb
+D:\repos\DriveDemo\Drive.DALFactory\bin\Debug\Drive.Model.dll.config
+D:\repos\DriveDemo\Drive.DALFactory\bin\Debug\EntityFramework.xml
+D:\repos\DriveDemo\Drive.DALFactory\bin\Debug\EntityFramework.SqlServer.xml
+D:\repos\DriveDemo\Drive.DALFactory\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\repos\DriveDemo\Drive.DALFactory\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+D:\repos\DriveDemo\Drive.DALFactory\obj\Debug\Drive.DALFactory.csprojAssemblyReference.cache
+D:\repos\DriveDemo\Drive.DALFactory\obj\Debug\Drive.DALFactory.csproj.CoreCompileInputs.cache
+D:\repos\DriveDemo\Drive.DALFactory\obj\Debug\Drive.DALFactory.csproj.CopyComplete
+D:\repos\DriveDemo\Drive.DALFactory\obj\Debug\Drive.DALFactory.dll
+D:\repos\DriveDemo\Drive.DALFactory\obj\Debug\Drive.DALFactory.pdb

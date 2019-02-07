@@ -36,3 +36,28 @@ E:\Visual Studio 2012\Projects\Drive\Drive.BLL\bin\Debug\zh-Hans\EntityFramework
 E:\Visual Studio 2012\Projects\Drive\Drive.BLL\obj\Debug\Drive.BLL.csprojResolveAssemblyReference.cache
 E:\Visual Studio 2012\Projects\Drive\Drive.BLL\obj\Debug\Drive.BLL.dll
 E:\Visual Studio 2012\Projects\Drive\Drive.BLL\obj\Debug\Drive.BLL.pdb
+D:\repos\DriveDemo\Drive.BLL\bin\Debug\Drive.BLL.dll.config
+D:\repos\DriveDemo\Drive.BLL\bin\Debug\Drive.BLL.dll
+D:\repos\DriveDemo\Drive.BLL\bin\Debug\Drive.BLL.pdb
+D:\repos\DriveDemo\Drive.BLL\bin\Debug\Drive.DALFactory.dll
+D:\repos\DriveDemo\Drive.BLL\bin\Debug\Drive.IBLL.dll
+D:\repos\DriveDemo\Drive.BLL\bin\Debug\Drive.IDAL.dll
+D:\repos\DriveDemo\Drive.BLL\bin\Debug\Drive.Model.dll
+D:\repos\DriveDemo\Drive.BLL\bin\Debug\EntityFramework.dll
+D:\repos\DriveDemo\Drive.BLL\bin\Debug\Drive.DAL.dll
+D:\repos\DriveDemo\Drive.BLL\bin\Debug\Drive.DALFactory.pdb
+D:\repos\DriveDemo\Drive.BLL\bin\Debug\Drive.DALFactory.dll.config
+D:\repos\DriveDemo\Drive.BLL\bin\Debug\Drive.IBLL.pdb
+D:\repos\DriveDemo\Drive.BLL\bin\Debug\Drive.IDAL.pdb
+D:\repos\DriveDemo\Drive.BLL\bin\Debug\Drive.IDAL.dll.config
+D:\repos\DriveDemo\Drive.BLL\bin\Debug\Drive.Model.pdb
+D:\repos\DriveDemo\Drive.BLL\bin\Debug\Drive.Model.dll.config
+D:\repos\DriveDemo\Drive.BLL\bin\Debug\EntityFramework.xml
+D:\repos\DriveDemo\Drive.BLL\bin\Debug\Drive.DAL.pdb
+D:\repos\DriveDemo\Drive.BLL\bin\Debug\Drive.DAL.dll.config
+D:\repos\DriveDemo\Drive.BLL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\repos\DriveDemo\Drive.BLL\obj\Debug\Drive.BLL.csprojAssemblyReference.cache
+D:\repos\DriveDemo\Drive.BLL\obj\Debug\Drive.BLL.csproj.CoreCompileInputs.cache
+D:\repos\DriveDemo\Drive.BLL\obj\Debug\Drive.BLL.csproj.CopyComplete
+D:\repos\DriveDemo\Drive.BLL\obj\Debug\Drive.BLL.dll
+D:\repos\DriveDemo\Drive.BLL\obj\Debug\Drive.BLL.pdb

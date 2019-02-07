@@ -20,6 +20,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -56,6 +58,12 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="Spring.Core, Version=2.0.1.45000, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
       <HintPath>..\packages\Spring.Core.2.0.1\lib\net45\Spring.Core.dll</HintPath>
       <Private>True</Private>
@@ -154,16 +162,64 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DriveSchool.cs" />
+    <Compile Include="Models\Resources.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\drive\app_code.png" />
     <Content Include="Content\drive\bmap_autocomplete.css" />
     <Content Include="Content\drive\bootstrap.min.css" />
+    <Content Include="Content\drive\city.png" />
     <Content Include="Content\drive\comm_style.css" />
+    <Content Include="Content\drive\copyright_logo.png" />
+    <Content Include="Content\drive\counterclose.png" />
     <Content Include="Content\drive\font_700844_fzp3tfpjzio.css" />
     <Content Include="Content\drive\font_949786_v8zsbvaxz6p.css" />
     <Content Include="Content\drive\footer.css" />
+    <Content Include="Content\drive\hits.js" />
+    <Content Include="Content\drive\jxc_xwyd.png" />
+    <Content Include="Content\drive\jxrz.png" />
     <Content Include="Content\drive\jx_list.css" />
+    <Content Include="Content\drive\left-layer.png" />
+    <Content Include="Content\drive\logo.png" />
+    <Content Include="Content\drive\marker_red_sprite.png" />
+    <Content Include="Content\drive\newfooter.png" />
+    <Content Include="Content\drive\newfooterclose.png" />
+    <Content Include="Content\drive\n_v1bkujjd7i7utfmizggrdq_cdebc1e04c8f0db9.jpg" />
+    <Content Include="Content\drive\n_v204b073cffe4e4da69e8b681b8fe81610_1a0609f004c0bda1.jpg" />
+    <Content Include="Content\drive\n_v20ef7f6fb2e834be18d105a9b056f2404_1fd69ce0f24bbe2d.jpg" />
+    <Content Include="Content\drive\n_v21d9c08b5fa76474c97946bb676c32c5c_79f17927adacd0ec.jpg" />
+    <Content Include="Content\drive\n_v22e107b04f26a4de2baba8cbdfa7474e3_dc489a3ed3ec5322.jpg" />
+    <Content Include="Content\drive\n_v245f2adb85a794383b6775d4d8109e154_d5ff30a7f784b3db.jpg" />
+    <Content Include="Content\drive\n_v25731738849f44d269bcd0f479da72bb3_83c45363703fa0fd.jpg" />
+    <Content Include="Content\drive\n_v259abe782858548c6907e36e3d5d53573_68140d31deea483c.jpg" />
+    <Content Include="Content\drive\n_v26319bc7cd3a648de9739f20183bea73a_60a460a7d90f94a5.jpg" />
+    <Content Include="Content\drive\n_v29f9d370c8d664d2cb5ec6b5f8ac969e3_62c8012908c32ce9.jpg" />
+    <Content Include="Content\drive\n_v29faa3f585ce843f4b1cf4f3e156c9c7d_d38dc935039da2ff.jpg" />
+    <Content Include="Content\drive\n_v2b4d1401adb2449d59f18102fd8882000_df4e2c8799bee1ce.jpg" />
+    <Content Include="Content\drive\n_v2bf7a0de24f20466ab4b523b1e421aeba_3b83ad84197b2e5e.jpg" />
+    <Content Include="Content\drive\n_v2c4f51e8bfbfe4bafb921cdf19b8bfb7c_31778da3c133c8b0.jpg" />
+    <Content Include="Content\drive\n_v2cc00eb41b6ab4e38bdf4c49c938080bd_4d90bf6d63f1907a.jpg" />
+    <Content Include="Content\drive\n_v2d704450baffc489f811a46ebb3c974e9_147928cd665eb5ea.jpg" />
+    <Content Include="Content\drive\n_v2e3100ab20ccd42e194dc3f1d7231c6fc_f89d9f6ca3eec978.jpg" />
+    <Content Include="Content\drive\n_v2f8eda398520c43b5bc3f60aa974bf8f5_93430ab9189bc858.png" />
+    <Content Include="Content\drive\n_v2fae1b1a3e2364a188d7817cbc99a93ce_ce530218b95173a6.jpg" />
+    <Content Include="Content\drive\n_v2fcd37ed47595448f86c77b3ba22e8e06_69456856c4c751ab.jpg" />
+    <Content Include="Content\drive\pic.png" />
+    <Content Include="Content\drive\slider\css\css.css" />
+    <Content Include="Content\drive\slider\img\1.jpg" />
+    <Content Include="Content\drive\slider\img\2.jpg" />
+    <Content Include="Content\drive\slider\img\3.jpg" />
+    <Content Include="Content\drive\slider\img\4.jpg" />
+    <Content Include="Content\drive\slider\img\5.jpg" />
+    <Content Include="Content\drive\slider\img\left.png" />
+    <Content Include="Content\drive\slider\img\right.png" />
+    <Content Include="Content\drive\star.png" />
+    <Content Include="Content\drive\star1.png" />
+    <Content Include="Content\drive\zhangyishan-fx.png" />
+    <Content Include="Content\drive\zhangyishan.png" />
+    <Content Include="Content\PagedList.css" />
     <Content Include="Scripts\drive\Registration\core.v2.10.1.min.js" />
     <Content Include="Content\drive\registration\font_949786_v8zsbvaxz6p.css" />
     <Content Include="Scripts\drive\Registration\isd_captcha.js" />
@@ -277,10 +333,12 @@
     <Content Include="Scripts\drive\n_v2dd947dc71a574ab0b8755bf4fb1bc370_69159f461eca33ef.jpg" />
     <Content Include="Scripts\drive\pic.png" />
     <Content Include="Scripts\drive\referrer_jxedt_pc.js" />
+    <Content Include="Scripts\drive\slider\js\index.js" />
     <Content Include="Scripts\drive\star.png" />
     <Content Include="Scripts\drive\star1.png" />
     <Content Include="Scripts\drive\zhangyishan-fx.png" />
     <Content Include="Scripts\drive\zhangyishan.png" />
+    <Content Include="Content\drive\getscript" />
     <None Include="Properties\PublishProfiles\DriveWeb.pubxml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\common_footer.js" />
@@ -345,10 +403,10 @@
     <Content Include="Views\Home\sdjxView.cshtml" />
     <Content Include="Views\Home\hyjxfxView.cshtml" />
     <Content Include="Views\Home\zixun.cshtml" />
+    <Content Include="Views\Home\IndexNew.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

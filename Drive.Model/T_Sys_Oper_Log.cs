@@ -18,7 +18,7 @@ namespace Drive.Model
         public string UserCode { get; set; }
         public string UserName { get; set; }
         public string LogType { get; set; }
-        public DateTime CreateTime { get; set; }
+        public Nullable<System.DateTime> CreateTime { get; set; }
         public string Content { get; set; }
     }
 }

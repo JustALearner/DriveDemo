@@ -30,3 +30,23 @@ E:\Visual Studio 2012\Projects\Drive\Drive.DAL\bin\Debug\zh-Hans\EntityFramework
 E:\Visual Studio 2012\Projects\Drive\Drive.DAL\obj\Debug\Drive.DAL.csprojResolveAssemblyReference.cache
 E:\Visual Studio 2012\Projects\Drive\Drive.DAL\obj\Debug\Drive.DAL.dll
 E:\Visual Studio 2012\Projects\Drive\Drive.DAL\obj\Debug\Drive.DAL.pdb
+D:\repos\DriveDemo\Drive.DAL\bin\Debug\Drive.DAL.dll.config
+D:\repos\DriveDemo\Drive.DAL\bin\Debug\Drive.DAL.dll
+D:\repos\DriveDemo\Drive.DAL\bin\Debug\Drive.DAL.pdb
+D:\repos\DriveDemo\Drive.DAL\bin\Debug\Drive.IDAL.dll
+D:\repos\DriveDemo\Drive.DAL\bin\Debug\Drive.Model.dll
+D:\repos\DriveDemo\Drive.DAL\bin\Debug\EntityFramework.dll
+D:\repos\DriveDemo\Drive.DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\repos\DriveDemo\Drive.DAL\bin\Debug\Drive.IDAL.pdb
+D:\repos\DriveDemo\Drive.DAL\bin\Debug\Drive.IDAL.dll.config
+D:\repos\DriveDemo\Drive.DAL\bin\Debug\Drive.Model.pdb
+D:\repos\DriveDemo\Drive.DAL\bin\Debug\Drive.Model.dll.config
+D:\repos\DriveDemo\Drive.DAL\bin\Debug\EntityFramework.xml
+D:\repos\DriveDemo\Drive.DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\repos\DriveDemo\Drive.DAL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\repos\DriveDemo\Drive.DAL\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+D:\repos\DriveDemo\Drive.DAL\obj\Debug\Drive.DAL.csprojAssemblyReference.cache
+D:\repos\DriveDemo\Drive.DAL\obj\Debug\Drive.DAL.csproj.CoreCompileInputs.cache
+D:\repos\DriveDemo\Drive.DAL\obj\Debug\Drive.DAL.csproj.CopyComplete
+D:\repos\DriveDemo\Drive.DAL\obj\Debug\Drive.DAL.dll
+D:\repos\DriveDemo\Drive.DAL\obj\Debug\Drive.DAL.pdb

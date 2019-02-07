@@ -6,3 +6,9 @@ E:\Visual Studio 2012\Projects\Drive\Drive.Common\bin\Debug\Drive.Common.dll
 E:\Visual Studio 2012\Projects\Drive\Drive.Common\bin\Debug\Drive.Common.pdb
 E:\Visual Studio 2012\Projects\Drive\Drive.Common\obj\Debug\Drive.Common.dll
 E:\Visual Studio 2012\Projects\Drive\Drive.Common\obj\Debug\Drive.Common.pdb
+D:\repos\DriveDemo\Drive.Common\bin\Debug\Drive.Common.dll
+D:\repos\DriveDemo\Drive.Common\bin\Debug\Drive.Common.pdb
+D:\repos\DriveDemo\Drive.Common\obj\Debug\Drive.Common.csprojAssemblyReference.cache
+D:\repos\DriveDemo\Drive.Common\obj\Debug\Drive.Common.csproj.CoreCompileInputs.cache
+D:\repos\DriveDemo\Drive.Common\obj\Debug\Drive.Common.dll
+D:\repos\DriveDemo\Drive.Common\obj\Debug\Drive.Common.pdb
