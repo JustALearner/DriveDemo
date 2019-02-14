@@ -10,6 +10,8 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <WebStackScaffolding_ViewDialogWidth>600</WebStackScaffolding_ViewDialogWidth>
+    <WebStackScaffolding_LayoutPageFile>~/Views/_ViewStart.cshtml</WebStackScaffolding_LayoutPageFile>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>

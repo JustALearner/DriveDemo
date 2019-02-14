@@ -14,7 +14,6 @@ D:\repos\DriveDemo\Drive.Common\obj\Debug\Drive.Common.dll
 D:\repos\DriveDemo\Drive.Common\obj\Debug\Drive.Common.pdb
 F:\Repos\Drive\Drive.Common\bin\Debug\Drive.Common.dll
 F:\Repos\Drive\Drive.Common\bin\Debug\Drive.Common.pdb
-F:\Repos\Drive\Drive.Common\obj\Debug\Drive.Common.csprojAssemblyReference.cache
 F:\Repos\Drive\Drive.Common\obj\Debug\Drive.Common.csproj.CoreCompileInputs.cache
 F:\Repos\Drive\Drive.Common\obj\Debug\Drive.Common.dll
 F:\Repos\Drive\Drive.Common\obj\Debug\Drive.Common.pdb

@@ -8,8 +8,11 @@ using System.Web.Security;
 using Drive.Common;
 using Drive.IBLL;
 using Drive.Model;
-using Drive.Model.VM;
+
 using Drive.WebApp.Attributes;
+using Drive.WebApp.Models;
+using Drive.WebApp.Models.Validators;
+using FluentValidation.Results;
 using Newtonsoft.Json;
 
 namespace Drive.WebApp.Controllers
@@ -39,11 +42,19 @@ namespace Drive.WebApp.Controllers
         public JsonResult Login(LoginViewModel model)
         {
 
-            if (!ModelState.IsValid)
+            LoginValidator validationRules = new LoginValidator();
+            ValidationResult validationResult = validationRules.Validate(model);
+            if (!validationResult.IsValid)
             {
-                //  return View(model);
-                return Json(new { code = -1, url = "", msg = "数据不合法" });
+                IList<ValidationFailure> failures = validationResult.Errors;
+                return Json(new {code = -1, url = "", msg = "数据不合法"});
             }
+
+//            if (!ModelState.IsValid)
+//            {
+//                //  return View(model);
+//                return Json(new { code = -1, url = "", msg = "数据不合法" });
+//            }
             if (model.UserCode.Trim() == "admin" && model.Password.Trim() == "pass")
             {
                 var authTicket = new FormsAuthenticationTicket(1, model.UserCode, DateTime.Now,

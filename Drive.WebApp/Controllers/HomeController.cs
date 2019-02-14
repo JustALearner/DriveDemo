@@ -6,7 +6,6 @@ using System.Web.Mvc;
 using System.Web.Security;
 using Drive.Common;
 using Drive.IBLL;
-using Drive.Model.VM;
 using Drive.WebApp.Models;
 using PagedList;
 
@@ -22,9 +21,12 @@ namespace Drive.WebApp.Controllers
         [HttpGet]
         //[AllowAnonymous]
 
-        public ActionResult Index()
+        public ActionResult Index(int? page)
         {
-            return View();
+            int pageNumber = page ?? 1;
+            var ds = Drive.WebApp.Models.Resources.DriveSchools;
+            IPagedList<DriveSchool> pagedList = ds.ToPagedList(pageNumber, 7);
+            return View("IndexNew",pagedList);
         }
         public ActionResult IndexNew(int? page)
         {

@@ -75,8 +75,6 @@
     <Compile Include="T_Sys_User.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="VM\LoginViewModel.cs" />
-    <Compile Include="VM\OperateLogViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

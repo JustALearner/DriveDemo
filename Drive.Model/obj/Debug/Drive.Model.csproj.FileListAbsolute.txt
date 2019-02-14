@@ -43,7 +43,6 @@ F:\Repos\Drive\Drive.Model\bin\Debug\EntityFramework.xml
 F:\Repos\Drive\Drive.Model\bin\Debug\EntityFramework.SqlServer.xml
 F:\Repos\Drive\Drive.Model\bin\Debug\zh-Hans\EntityFramework.resources.dll
 F:\Repos\Drive\Drive.Model\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
-F:\Repos\Drive\Drive.Model\obj\Debug\Drive.Model.csprojAssemblyReference.cache
 F:\Repos\Drive\Drive.Model\obj\Debug\Drive.Model.csproj.CoreCompileInputs.cache
 F:\Repos\Drive\Drive.Model\obj\Debug\Drive.Model.csproj.CopyComplete
 F:\Repos\Drive\Drive.Model\obj\Debug\Drive.Model.dll
