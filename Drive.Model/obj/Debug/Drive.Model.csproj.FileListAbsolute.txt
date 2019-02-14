@@ -34,3 +34,17 @@ D:\repos\DriveDemo\Drive.Model\obj\Debug\Drive.Model.csproj.CoreCompileInputs.ca
 D:\repos\DriveDemo\Drive.Model\obj\Debug\Drive.Model.csproj.CopyComplete
 D:\repos\DriveDemo\Drive.Model\obj\Debug\Drive.Model.dll
 D:\repos\DriveDemo\Drive.Model\obj\Debug\Drive.Model.pdb
+F:\Repos\Drive\Drive.Model\bin\Debug\Drive.Model.dll.config
+F:\Repos\Drive\Drive.Model\bin\Debug\Drive.Model.dll
+F:\Repos\Drive\Drive.Model\bin\Debug\Drive.Model.pdb
+F:\Repos\Drive\Drive.Model\bin\Debug\EntityFramework.dll
+F:\Repos\Drive\Drive.Model\bin\Debug\EntityFramework.SqlServer.dll
+F:\Repos\Drive\Drive.Model\bin\Debug\EntityFramework.xml
+F:\Repos\Drive\Drive.Model\bin\Debug\EntityFramework.SqlServer.xml
+F:\Repos\Drive\Drive.Model\bin\Debug\zh-Hans\EntityFramework.resources.dll
+F:\Repos\Drive\Drive.Model\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+F:\Repos\Drive\Drive.Model\obj\Debug\Drive.Model.csprojAssemblyReference.cache
+F:\Repos\Drive\Drive.Model\obj\Debug\Drive.Model.csproj.CoreCompileInputs.cache
+F:\Repos\Drive\Drive.Model\obj\Debug\Drive.Model.csproj.CopyComplete
+F:\Repos\Drive\Drive.Model\obj\Debug\Drive.Model.dll
+F:\Repos\Drive\Drive.Model\obj\Debug\Drive.Model.pdb

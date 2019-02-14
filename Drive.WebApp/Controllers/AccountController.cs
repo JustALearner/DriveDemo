@@ -44,18 +44,24 @@ namespace Drive.WebApp.Controllers
                 //  return View(model);
                 return Json(new { code = -1, url = "", msg = "数据不合法" });
             }
-            if (model.UserCode == "admin" && model.Password == "pass")
+            if (model.UserCode.Trim() == "admin" && model.Password.Trim() == "pass")
             {
                 var authTicket = new FormsAuthenticationTicket(1, model.UserCode, DateTime.Now,
                     DateTime.Now.AddMinutes(20), false, JsonConvert.SerializeObject(new T_Sys_Role { usercode = "admin", role = "123" }));
 
                 string encryptedTicket = FormsAuthentication.Encrypt(authTicket);
-                var authCookie = new HttpCookie(FormsAuthentication.FormsCookieName, encryptedTicket);
-                authCookie.HttpOnly = true;//客户端脚本不能访问
-                authCookie.Secure = FormsAuthentication.RequireSSL;//是否仅用https传递cookie
-                authCookie.Domain = FormsAuthentication.CookieDomain;//与cookie关联的域
-                authCookie.Path = FormsAuthentication.FormsCookiePath;//cookie关联的虚拟路径
-                authCookie.Expires = DateTime.Now.AddMinutes(20);
+                var authCookie = new HttpCookie(FormsAuthentication.FormsCookieName, encryptedTicket)
+                {
+                    HttpOnly = true,
+                    Secure = FormsAuthentication.RequireSSL,
+                    Domain = FormsAuthentication.CookieDomain,
+                    Path = FormsAuthentication.FormsCookiePath,
+                    Expires = DateTime.Now.AddMinutes(20)
+                };
+                //客户端脚本不能访问
+                //是否仅用https传递cookie
+                //与cookie关联的域
+                //cookie关联的虚拟路径
                 HttpContext context =System.Web.HttpContext.Current;
                 if (context == null)
                     throw new InvalidOperationException();
