@@ -44,13 +44,13 @@ F:\Repos\Drive\Drive.IBLL\bin\Debug\Drive.IDAL.dll
 F:\Repos\Drive\Drive.IBLL\bin\Debug\Drive.Model.dll
 F:\Repos\Drive\Drive.IBLL\bin\Debug\EntityFramework.dll
 F:\Repos\Drive\Drive.IBLL\bin\Debug\Drive.IDAL.pdb
-F:\Repos\Drive\Drive.IBLL\bin\Debug\Drive.IDAL.dll.config
 F:\Repos\Drive\Drive.IBLL\bin\Debug\Drive.Model.pdb
-F:\Repos\Drive\Drive.IBLL\bin\Debug\Drive.Model.dll.config
 F:\Repos\Drive\Drive.IBLL\bin\Debug\EntityFramework.xml
 F:\Repos\Drive\Drive.IBLL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+F:\Repos\Drive\Drive.IBLL\obj\Debug\Drive.IBLL.dll
+F:\Repos\Drive\Drive.IBLL\obj\Debug\Drive.IBLL.pdb
+F:\Repos\Drive\Drive.IBLL\bin\Debug\Drive.IDAL.dll.config
+F:\Repos\Drive\Drive.IBLL\bin\Debug\Drive.Model.dll.config
 F:\Repos\Drive\Drive.IBLL\obj\Debug\Drive.IBLL.csprojAssemblyReference.cache
 F:\Repos\Drive\Drive.IBLL\obj\Debug\Drive.IBLL.csproj.CoreCompileInputs.cache
 F:\Repos\Drive\Drive.IBLL\obj\Debug\Drive.IBLL.csproj.CopyComplete
-F:\Repos\Drive\Drive.IBLL\obj\Debug\Drive.IBLL.dll
-F:\Repos\Drive\Drive.IBLL\obj\Debug\Drive.IBLL.pdb

@@ -1,0 +1,107 @@
+﻿@{
+    Layout = null;
+    ViewBag.Title = "管理";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title> @ViewBag.Title</title>
+    <link href="../../Content/themes/default/easyui.css" rel="stylesheet" />
+    <link href="../../Content/themes/icon.css" rel="stylesheet" />
+    <link href="~/Content/themes/demo.css" rel="stylesheet" />
+
+
+    <script src="../../Scripts/jquery.min.js"></script>
+    <script src="../../Scripts/jquery.easyui.min.js"></script>
+    <style>
+    </style>
+</head>
+<body class="easyui-layout">
+
+    <div data-options="region:'west',split:true,title:'West'" style="width:220px; padding: 10px;">
+        <div id="sm"></div>
+    </div>
+    <div data-options="region:'center',title:'Center'">
+        <div id="tabs"></div>
+    </div>
+
+
+    <script type="text/javascript">
+    var data = [
+        {
+            text: '系统管理',
+            iconCls: 'icon-sum',
+            state: 'open',
+            children: [
+                {
+                    text: '敏感词'
+                }, {
+                    text: '日志查看'
+                }
+            ]
+        }
+    ];
+    $(function() {
+        $('#sm').sidemenu({
+            data: [
+                {
+                    text: '系统管理',
+                    iconCls: 'icon-sum',
+                    state: 'open',
+                    children: [
+                        {
+                            text: '敏感词',
+                            url:'@Url.Action("SensitiveWord", "Home")'
+
+                        }, {
+                            text: '日志查看',
+                            url: '@Url.Action("queryOperLog", "Home")'
+
+                        }
+                    ]
+                }
+            ],
+            onSelect: onSideMenuSelect,
+            border: false
+        });
+
+        $('#tabs').tabs({
+          fit:true,
+            border: false,
+            onSelect: function (title) {
+//                alert(title + ' is selected');
+            }
+        });
+    });
+
+
+    function onSideMenuSelect(item) {
+        //        console.log(item.text);
+        if (!$('#tabs').tabs('exists', item.text)) {
+            $('#tabs').tabs('add',
+                {
+                    title:item.text,
+                    content: '<iframe scrolling="auto" frameborder="0"  src="' + item.url + '" style="width:100%;height:99%;"></iframe>',
+                    closable: true,
+                    tools: [
+                        {
+                            iconCls: 'icon-mini-refresh',
+                            handler: function() {
+//                                alert('refresh');
+                            }
+                        }
+                    ]
+                });
+        } else {
+            $('#tabs').tabs('select',item.text);
+        }
+
+//        console.log("left menu click");
+    }
+
+    </script>
+</body>
+</html>

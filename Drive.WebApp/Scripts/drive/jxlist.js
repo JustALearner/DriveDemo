@@ -83,93 +83,93 @@
 	        return document.getElementById(id);
 	    }
 
-	    var map = new BMap.Map("jxMap", {
-	        enableMapClick: false
-	    });
-	    var point = new BMap.Point(116.331398, 39.897445);
-	    map.centerAndZoom(point, 12);
-	    // map.enableScrollWheelZoom();
-	    var geolocation = new BMap.Geolocation();
-	    geolocation.getCurrentPosition(function (r) {
-	        console.log(r);
-	        if (this.getStatus() == BMAP_STATUS_SUCCESS) {
-	            var mk = new BMap.Marker(r.point);
-	            map.panTo(r.point);
-	            map.addOverlay(mk);
-	        }
-	    }, { enableHighAccuracy: true });
-
-	    var navigationControl = new BMap.NavigationControl({
-	        // 靠右下角位置
-	        anchor: BMAP_ANCHOR_BOTTOM_RIGHT,
-	        // LARGE类型
-	        type: BMAP_NAVIGATION_CONTROL_ZOOM,
-	        // 启用显示定位
-	        enableGeolocation: false
-	    });
-	    map.addControl(navigationControl);
-	    var ac = new BMap.Autocomplete({ //建立一个自动完成的对象
-	        "input": "suggestId",
-	        "location": map
-	    });
-	    ac.addEventListener("onhighlight", function (e) {
-	        //鼠标放在下拉列表上的事件
-	        var str = "";
-	        var _value = e.fromitem.value;
-	        var value = "";
-	        if (e.fromitem.index > -1) {
-	            value = _value.province + _value.city + _value.district + _value.street + _value.business;
-	        }
-	        str = "FromItem<br />index = " + e.fromitem.index + "<br />value = " + value;
-
-	        value = "";
-	        if (e.toitem.index > -1) {
-	            _value = e.toitem.value;
-	            value = _value.province + _value.city + _value.district + _value.street + _value.business;
-	        }
-	        str += "<br />ToItem<br />index = " + e.toitem.index + "<br />value = " + value;
-	        G("searchResultPanel").innerHTML = str;
-	    });
-
-	    var myValue;
-	    ac.addEventListener("onconfirm", function (e) {
-	        //鼠标点击下拉列表后的事件
-	        var _value = e.item.value;
-	        myValue = _value.province + _value.city + _value.district + _value.street + _value.business;
-	        G("searchResultPanel").innerHTML = "onconfirm<br />index = " + e.item.index + "<br />myValue = " + myValue;
-	        setPlace();
-	    });
-	    map.addEventListener("click", function (e) {
-	        addMarker(e.point);
-	        getGeocoder(e.point);
-	    });
-	    function setPlace() {
-	        map.clearOverlays(); //清除地图上所有覆盖物
-	        function myFun() {
-	            var pp = local.getResults().getPoi(0).point; //获取第一个智能搜索的结果
-	            map.centerAndZoom(pp, 18);
-	            addMarker(pp); //添加标注
-	        }
-
-	        var local = new BMap.LocalSearch(map, { //智能搜索
-	            onSearchComplete: myFun
-	        });
-	        local.search(myValue);
-	    }
+//	    var map = new BMap.Map("jxMap", {
+//	        enableMapClick: false
+//	    });
+//	    var point = new BMap.Point(116.331398, 39.897445);
+//	    map.centerAndZoom(point, 12);
+//	    // map.enableScrollWheelZoom();
+//	    var geolocation = new BMap.Geolocation();
+//	    geolocation.getCurrentPosition(function (r) {
+//	        console.log(r);
+//	        if (this.getStatus() == BMAP_STATUS_SUCCESS) {
+//	            var mk = new BMap.Marker(r.point);
+//	            map.panTo(r.point);
+//	            map.addOverlay(mk);
+//	        }
+//	    }, { enableHighAccuracy: true });
+//
+//	    var navigationControl = new BMap.NavigationControl({
+//	        // 靠右下角位置
+//	        anchor: BMAP_ANCHOR_BOTTOM_RIGHT,
+//	        // LARGE类型
+//	        type: BMAP_NAVIGATION_CONTROL_ZOOM,
+//	        // 启用显示定位
+//	        enableGeolocation: false
+//	    });
+//	    map.addControl(navigationControl);
+//	    var ac = new BMap.Autocomplete({ //建立一个自动完成的对象
+//	        "input": "suggestId",
+//	        "location": map
+//	    });
+//	    ac.addEventListener("onhighlight", function (e) {
+//	        //鼠标放在下拉列表上的事件
+//	        var str = "";
+//	        var _value = e.fromitem.value;
+//	        var value = "";
+//	        if (e.fromitem.index > -1) {
+//	            value = _value.province + _value.city + _value.district + _value.street + _value.business;
+//	        }
+//	        str = "FromItem<br />index = " + e.fromitem.index + "<br />value = " + value;
+//
+//	        value = "";
+//	        if (e.toitem.index > -1) {
+//	            _value = e.toitem.value;
+//	            value = _value.province + _value.city + _value.district + _value.street + _value.business;
+//	        }
+//	        str += "<br />ToItem<br />index = " + e.toitem.index + "<br />value = " + value;
+//	        G("searchResultPanel").innerHTML = str;
+//	    });
+//
+//	    var myValue;
+//	    ac.addEventListener("onconfirm", function (e) {
+//	        //鼠标点击下拉列表后的事件
+//	        var _value = e.item.value;
+//	        myValue = _value.province + _value.city + _value.district + _value.street + _value.business;
+//	        G("searchResultPanel").innerHTML = "onconfirm<br />index = " + e.item.index + "<br />myValue = " + myValue;
+//	        setPlace();
+//	    });
+//	    map.addEventListener("click", function (e) {
+//	        addMarker(e.point);
+//	        getGeocoder(e.point);
+//	    });
+//	    function setPlace() {
+//	        map.clearOverlays(); //清除地图上所有覆盖物
+//	        function myFun() {
+//	            var pp = local.getResults().getPoi(0).point; //获取第一个智能搜索的结果
+//	            map.centerAndZoom(pp, 18);
+//	            addMarker(pp); //添加标注
+//	        }
+//
+//	        var local = new BMap.LocalSearch(map, { //智能搜索
+//	            onSearchComplete: myFun
+//	        });
+//	        local.search(myValue);
+//	    }
 
 	    /**
 	     * 开启地图弹窗事件
 	     */
-	    $(".jx-list-contact #address_map").click(function () {
-	        $(".address-popup-wrap").show();
-	    });
+//	    $(".jx-list-contact #address_map").click(function () {
+//	        $(".address-popup-wrap").show();
+//	    });
 
 	    /**
 	     * 关闭地图弹窗事件
 	     */
-	    $("#jxClose").click(function () {
-	        $(".address-popup-wrap").hide();
-	    });
+//	    $("#jxClose").click(function () {
+//	        $(".address-popup-wrap").hide();
+//	    });
 
 	    // /**
 	    //  * 处理定位后的信息
@@ -576,12 +576,12 @@
 	        return re.test(v);
 	    }
 	    $(".go_to").click(function () {
-	        var enumType = this.getAttribute("enumType");
-	        var enumValue = this.getAttribute("enumValue");
-	        var selectpath = this.getAttribute("selectpath");
-	        var areastr = this.getAttribute("areastr");
-	        var citystr = this.getAttribute("citystr");
-	        Goto(enumType, enumValue, selectpath, areastr, citystr);
+//	        var enumType = this.getAttribute("enumType");
+//	        var enumValue = this.getAttribute("enumValue");
+//	        var selectpath = this.getAttribute("selectpath");
+//	        var areastr = this.getAttribute("areastr");
+//	        var citystr = this.getAttribute("citystr");
+//	        Goto(enumType, enumValue, selectpath, areastr, citystr);
 	    });
 	}
 

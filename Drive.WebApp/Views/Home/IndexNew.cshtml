@@ -1,7 +1,12 @@
-﻿@model PagedList.IPagedList<Drive.WebApp.Models.DriveSchool>
+﻿
+@using Drive.WebApp.Models
+@using PagedList
 @using PagedList.Mvc;
 @{
     Layout = null;
+    var list = ViewBag.DS as IPagedList<DriveSchool>;
+    var enumtype = ViewBag.type;
+    var enumvalue = ViewBag.value;
 }
 
 <!DOCTYPE html>
@@ -15,19 +20,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8">
     <title>驾校报名_学车驾校_考驾驶证_学驾照</title>
-    <meta content="驾校一点通,驾校学车,驾校报名" name="keywords">
+    <meta content="驾校学车,驾校报名" name="keywords">
     <meta content="找驾校就要找无隐性消费、上车快、通过率高的驾校，全国驾校排行榜，千万学员真实点评，让你轻松找到心仪的驾校！" name="description">
 
     <meta http-equiv="”Cache-Control”" content="”no-transform”">
-    <link rel="shortcut icon" type="image/x-icon" href="http://img.58cdn.com.cn/jxedt/logos/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="~/Content/drive/cwcar.ico">
     <link rel="stylesheet" href="~/Content/drive/reset.css">
     <link rel="stylesheet" href="~/Content/drive/jx_list.css">
     <link rel="stylesheet" href="~/Content/drive/slider/css/css.css">
 
     <script src="~/Scripts/drive/hm.js"></script>
     <script src="~/Scripts/drive/jquery.1.12.4.js"></script>
+    <script src="~/Scripts/drive/jxlist.js"></script>
     @* <link rel="stylesheet" type="text/css" href="~/Content/drive/bmap_autocomplete.css"> *@
+    <script>
 
+    </script>
 </head>
 <body>
     <link rel="stylesheet" href="~/Content/drive/comm_style.css">
@@ -40,22 +48,26 @@
                 <div class="comment-header-left">
                     <!--<span class="VTargetSpan"></span>-->
                     <!--<img class="comment-header-vip-img" src="//img.58cdn.com.cn/dist/jxedt/pc/products/jxregister/images/vip.png" alt="">-->
-                    <span class="comment-header-vip-describe">
-                        <i class="iconfont jxedt-VIP"></i>
-                        <a href="http://vip.jxedt.com/" onclick="clickLog('from=JXEDT_HEADER_VIP')">VIP真题</a>
+                    <span class="comment-header-vip-describe" style="font-size: 20px">
+                        <a>
+                            @* <img src="/Content/drive/cw.png" alt=""> *@
+                            网上学习
+                        </a>
+                        @* <i class="iconfont jxedt-VIP"></i> *@
+                        @* <a href="http://vip.jxedt.com/" onclick="clickLog('from=JXEDT_HEADER_VIP')">VIP真题</a> *@
                     </span>
                     <span class="comment-header-phone-describe">
-                        驾校一点通学车热线：
-                        <span class="comment-header-phone">400-011-8360</span>
+                        @* 驾校一点通学车热线： *@
+                        @* <span class="comment-header-phone">400-011-8360</span> *@
                     </span>
-                    <div class="comment-login-1" style="display:inline-block;">
+                    <div class="comment-login-1" style="display: inline-block;">
                         @if (User.Identity.IsAuthenticated)
                         {
                             using (Html.BeginForm("Logout", "Account", FormMethod.Post, new { id = "logoutForm" }))
                             {
                                 //@Html.AntiForgeryToken()
 
-                                <span class="btn-span">  <a href="javascript:;">Hello, @User.Identity.Name</a></span>
+                                <span class="btn-span"><a href="javascript:;">Hello, @User.Identity.Name</a></span>
                                 @*                             <span class="btn-span"> <a href="javascript:;" id="logout">退出系统</a></span> *@
                                 <span class="btn-span">@Html.ActionLink("退出系统", "Logout", "Account") </span>
 
@@ -82,7 +94,10 @@
                         @* </ul> *@
                     </div>
                     @* <a class="right-text" href="http://user.jxedt.com/registerNew/jx">驾校入驻</a> *@
-                    <a class="right-text" target="_blank" href="/Home/queryOperLog">驾校后台</a>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <a class="right-text" target="_blank" href="/Home/Manage">驾校后台</a>
+                    }
                 </div>
             </div>
             <!-- 搜索 -->
@@ -98,8 +113,12 @@
                                 <img src="~/Content/drive/slider/img/4.jpg">
                                 <img src="~/Content/drive/slider/img/5.jpg">
                             </div>
-                            <div class="left"><img src="~/Content/drive/slider/img/left.png"> </div>
-                            <div class="right"><img src="~/Content/drive/slider/img/right.png"></div>
+                            <div class="left">
+                                <img src="~/Content/drive/slider/img/left.png">
+                            </div>
+                            <div class="right">
+                                <img src="~/Content/drive/slider/img/right.png">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -116,21 +135,49 @@
     <div class="commonhead_line" style="border-top: 1px solid #00C356;"></div>
     <div class="jx-list-wrap">
         <article class="jx-list">
-            @* <div class="jx-list-position"> *@
-            @* </div> *@
+            <div class="jx-list-position">
+            </div>
             <div class="left-nav">
                 <div class="jx-list-header">
                     <!--驾校搜索 start -->
                     <nav>
-                        @* <div class="sort-mode"> *@
-                        @* </div> *@
+
+
+                        <div class="license-type">
+                            <span>驾照类型：</span>
+                            @* <a enumtype="license" enumvalue="" selectpath="" areastr="" citystr="bj" class="go_to  active " href="/Home/IndexNew?type='license'&value=''">不限</a> *@
+                            @* <a enumtype="license" enumvalue="c1" selectpath="" areastr="" citystr="bj" class="go_to "  href="/Home/IndexNew?type='license'&value='c1'">C1</a> *@
+                            @* <a enumtype="license" enumvalue="c2" selectpath="" areastr="" citystr="bj" class="go_to "  href="/Home/IndexNew?type='license'&value='c2'">C2</a> *@
+                            @* <a enumtype="license" enumvalue="aa" selectpath="" areastr="" citystr="bj" class="go_to "  href="/Home/IndexNew?type='license'&value='aa'">A1/A2</a> *@
+                            @* <a enumtype="license" enumvalue="bb" selectpath="" areastr="" citystr="bj" class="go_to "  href="/Home/IndexNew?type='license'&value='bb'">B1/B2</a> *@
+                            <a enumtype="license" enumvalue="" selectpath="" areastr="" citystr="bj" class="  active " href="/Home/IndexNew?type=license&value=">不限</a>
+                            <a enumtype="license" enumvalue="c1" selectpath="" areastr="" citystr="bj" class=" " href="/Home/IndexNew?type=license&value=c1">C1</a>
+                            <a enumtype="license" enumvalue="c2" selectpath="" areastr="" citystr="bj" class=" " href="/Home/IndexNew?type=license&value=c2">C2</a>
+                            <a enumtype="license" enumvalue="aa" selectpath="" areastr="" citystr="bj" class=" " href="/Home/IndexNew?type=license&value=aa">A1/A2</a>
+                            <a enumtype="license" enumvalue="bb" selectpath="" areastr="" citystr="bj" class=" " href="/Home/IndexNew?type=license&value=bb">B1/B2</a>
+
+                        </div>
+                        <div class="price-between">
+                            <span>价格区间：</span>
+                            @* <a enumtype="price" enumvalue="" selectpath="" areastr="" citystr="bj" class="go_to  active ">不限</a> *@
+                            @* <a enumtype="price" enumvalue="1" selectpath="" areastr="" citystr="bj" class="go_to ">￥3000以下</a> *@
+                            @* <a enumtype="price" enumvalue="2" selectpath="" areastr="" citystr="bj" class="go_to ">￥3000-￥4000</a> *@
+                            @* <a enumtype="price" enumvalue="3" selectpath="" areastr="" citystr="bj" class="go_to ">￥4000-￥5000</a> *@
+                            @* <a enumtype="price" enumvalue="4" selectpath="" areastr="" citystr="bj" class="go_to ">￥5000以上</a> *@
+                            <a enumtype="price" enumvalue="" selectpath="" areastr="" citystr="bj" class="  active " href="/Home/IndexNew?type=license&value=">不限</a>
+                            <a enumtype="price" enumvalue="1" selectpath="" areastr="" citystr="bj" class=" " href="/Home/IndexNew?type=price&value=1">￥3000以下</a>
+                            <a enumtype="price" enumvalue="2" selectpath="" areastr="" citystr="bj" class=" " href="/Home/IndexNew?type=price&value=2">￥3000-￥4000</a>
+                            <a enumtype="price" enumvalue="3" selectpath="" areastr="" citystr="bj" class=" " href="/Home/IndexNew?type=price&value=3">￥4000-￥5000</a>
+                            <a enumtype="price" enumvalue="4" selectpath="" areastr="" citystr="bj" class=" " href="/Home/IndexNew?type=price&value=4">￥5000以上</a>
+                        </div>
+
                     </nav>
-                  
+
                     <!--驾校搜索 end   -->
                     <div class="row jx-list-line"></div>
                     <!--驾校列表 start -->
-                    <div class="row jx-list-page">
-                        @foreach (var item in Model)
+                    <div class="row jx-list-page" id="schoollist">
+                        @foreach (var item in list)
                         {
                             <div class="row jx-list-detail-page">
                                 <div class="col-md-2">
@@ -171,7 +218,7 @@
                                             {
                                                 <span>@t</span>
                                             }
-                                          
+
                                         </a>
                                     </p>
                                 </div>
@@ -180,33 +227,33 @@
                                 </div>
                             </div>
                         }
-                      
-                    </div>							
+
+                    </div>
                     <!--驾校列表 end   -->
                     <!-- 分页按钮 -->
                     <div class="page-warp">
                         <div class="page-item">
 
-                        
 
-                               
+
+
                             @{
-                                var prep =Model.HasPreviousPage?Model.PageNumber - 1:1;
-                                <a class="page-btn" href=@Url.Action("IndexNew", "Home", new {page = prep})>&lt;</a>
+                                var prep = list.HasPreviousPage ? list.PageNumber - 1 : 1;
+                                <a class="page-btn" href=@Url.Action("IndexNew", "Home", new { page = prep ,type=enumtype,value=enumvalue})>&lt;</a>
 
                             }
-                               
-                          
 
-                            @for (int i = 1; i <= Model.PageCount; i++)
+
+
+                            @for (int i = 1; i <= list.PageCount; i++)
                             {
-                                <a class="page-btn" href=@Url.Action("IndexNew","Home",new{page=i})>@i</a>
+                                <a class="page-btn" href=@Url.Action("IndexNew", "Home", new { page = i ,type=enumtype,value=enumvalue})>@i</a>
                             }
-                                                      
-                            @if (Model.HasNextPage)
+
+                            @if (list.HasNextPage)
                             {
-                            var next = Model.PageNumber + 1;
-                            <a class="page-btn" href=@Url.Action("IndexNew","Home",new{page=next})>&gt;</a>
+                                var next = list.PageNumber + 1;
+                                <a class="page-btn" href=@Url.Action("IndexNew", "Home", new { page = next,type=enumtype,value=enumvalue })>&gt;</a>
                             }
                             @* <a href="http://jiaxiao.jxedt.com/index_2/"> *@
                             @*     &gt; *@
@@ -221,8 +268,7 @@
                 <!--帮您找驾校-->
                 <link rel="stylesheet" href="~/Content/drive/font_700844_fzp3tfpjzio.css">
                 <div>
-                    <a class="right-nav-img-admission" href="http://user.jxedt.com/registerNew/jx" target="_blank">
-                    </a>
+                    <a class="right-nav-img-admission" href="http://user.jxedt.com/registerNew/jx" target="_blank"></a>
                 </div>
                 <!--驾校广告位-->
                 <!--全国-->
@@ -231,31 +277,31 @@
 
                     <div class="jx-recommend-imgs">
                         <a href="javascript:void(0)" data-track="JXEDT_JXLB_GG_1">
-                            <img src="~/Content/drive/jxc_xwyd.png" alt="" srcset="">
+                            <img src="~/Content/drive/jxc_xwyd_1.png" alt="" srcset="">
                         </a>
                     </div>
 
                     <div class="jx-recommend-imgs">
                         <a href="javascript:void(0)" data-track="JXEDT_JXLB_GG_2">
-                            <img src="~/Content/drive/jxc_xwyd.png" alt="" srcset="">
+                            <img src="~/Content/drive/jxc_xwyd_1.png" alt="" srcset="">
                         </a>
                     </div>
 
                     <div class="jx-recommend-imgs">
                         <a href="javascript:void(0)" data-track="JXEDT_JXLB_GG_3">
-                            <img src="~/Content/drive/jxc_xwyd.png" alt="" srcset="">
+                            <img src="~/Content/drive/jxc_xwyd_1.png" alt="" srcset="">
                         </a>
                     </div>
 
                     <div class="jx-recommend-imgs">
                         <a href="javascript:void(0)" data-track="JXEDT_JXLB_GG_4">
-                            <img src="~/Content/drive/jxc_xwyd.png" alt="" srcset="">
+                            <img src="~/Content/drive/jxc_xwyd_1.png" alt="" srcset="">
                         </a>
                     </div>
 
                     <div class="jx-recommend-imgs">
                         <a href="javascript:void(0)" data-track="JXEDT_JXLB_GG_5">
-                            <img src="~/Content/drive/jxc_xwyd.png" alt="" srcset="">
+                            <img src="~/Content/drive/jxc_xwyd_1.png" alt="" srcset="">
                         </a>
                     </div>
 
@@ -281,20 +327,20 @@
     </div>
     <ul class="right-nav-common" style="display: none;">
         <li class="downApp">
-            <a target="_blank" href="http://www.jxedt.com/about">
+            <a target="_blank" href="">
                 <div class="downApp-icon"></div>
             </a>
-            <div class="downApp-alert"></div>
+            @* <div class="downApp-alert"></div> *@
         </li>
         <li class="opinion">
-            <a target="_blank" href="http://www.jxedt.com/about/index.asp">
+            <a target="_blank" href="">
                 <div class="opinion-icon"></div>
             </a>
-            <div class="opinion-alert"><a target="_blank" href="http://www.jxedt.com/about/index.asp">意见反馈</a></div>
+            <div class="opinion-alert"><a target="_blank" href="">意见反馈</a></div>
         </li>
         <li class="service">
             <div class="service-icon"></div>
-            <div class="service-alert"><span>400-011-8360</span></div>
+            <div class="service-alert"><span>400-900-9260</span></div>
         </li>
         <li class="gotop">
             <div class="gotop-icon"></div>
@@ -302,117 +348,6 @@
         </li>
     </ul>
     <div class="hide">
-        <div class="counterbox" style="z-index:999;">
-            <div class="table">
-                <div class="counter">
-                    <div class="person-wrap">
-                        <img src="~/Content/drive/zhangyishan-fx.png" alt="">
-                    </div>
-                    <div class="left">
-                        <p>驾考计算器</p>
-                        <div class="infobox">
-                            <div class="info name">
-                                <label for="name">
-                                    姓名:
-                                </label>
-                                <input type="text" id="name" name="username" placeholder="请输入您的姓名">
-                            </div>
-                            <div class="info phone">
-                                <label for="phone">
-                                    手机号码:
-                                </label>
-                                <input type="text" id="phone" name="phone" placeholder="请输入您的手机号">
-                            </div>
-                            <div class="info code">
-                                <label for="code">
-                                    验证码:
-                                </label>
-                                <input type="text" id="code" name="code" placeholder="请输入验证码">
-                                <button class="sendcode">获取验证码</button>
-                            </div>
-                            <div class="info type">
-                                <label for="type">
-                                    驾照类型:
-                                </label>
-                                <select name="" id="type">
-                                    <option value="C1">C1（小型汽车）</option>
-                                    <option value="C2">C2（小型自动挡汽车）</option>
-                                    <option value="B2">B2（大型货车）</option>
-                                    <option value="B1">B1（中型客车）</option>
-                                    <option value="A1">A1（大型客车）</option>
-                                    <option value="A2">A2（牵引车）</option>
-                                    <option value="A3">A3（城市公交车）</option>
-                                    <option value="C5">C5（残疾人专用小型自动挡载客汽车）</option>
-                                    <option value="E">E（普通二轮摩托车）</option>
-                                    <option value="C3">C3（低速载货汽车）</option>
-                                    <option value="C4">C4（三轮汽车）</option>
-                                </select>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="beginout" onclick="clickLog('from=JXEDT_FUCENG_KSJS')">
-                        <div class="beginin">
-                            开始计算
-                        </div>
-                    </div>
-                    <div class="right">
-                        <p>
-                            您的驾考预算为
-                            <span class="allmoney">?</span>元
-                        </p>
-                        <style>
-                            .moneybox p {
-                                margin: 2px 0;
-                            }
-                        </style>
-                        <div class="moneybox">
-                            <div class="money">
-                                <p>档案费</p>
-                                <p class="file">?</p>
-                                <p>元</p>
-                            </div>
-                            <div class="money">
-                                <p>拍照费</p>
-                                <p class="photo">?</p>
-                                <p>元</p>
-                            </div>
-                            <div class="money">
-                                <p>考试费</p>
-                                <p class="exam">?</p>
-                                <p>元</p>
-                            </div>
-                            <div class="money">
-                                <p>体检费</p>
-                                <p class="health">?</p>
-                                <p>元</p>
-                            </div>
-                            <div class="money">
-                                <p>驾校培训费</p>
-                                <p class="train">?</p>
-                                <p>元</p>
-                            </div>
-                            <div class="money">
-                                <p>驾驶证工本费</p>
-                                <p class="papers">?</p>
-                                <p>元</p>
-                            </div>
-                            <div class="money">
-                                <p>补考费</p>
-                                <p class="make-up">?</p>
-                                <p>元</p>
-                            </div>
-                        </div>
-                        <div class="goto">
-                            <a href="http://jiaxiao.jxedt.com/" onclick="clickLog('from=JXEDT_FUCENG_QTJXBJ')">去看看驾校报价</a>
-                        </div>
-                    </div>
-                    <div class="counterclose">
-                        <img src="~/Content/drive/counterclose.png">
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
     <footer class="comment-footer">
         <div class="comment-footer-external">
@@ -420,21 +355,17 @@
                 <span class="external-header-span">
                     <a data-external="external" href="javascript:void(0);" class="active_footer">友情链接</a>
                 </span>
-                <span>
-                    <a data-external="hot" href="javascript:void(0);">热门驾校</a>
-                </span>
-                <span>
-                    <a data-external="difficult" href="javascript:void(0);">驾校疑难解答</a>
-                </span>
+                <span></span>
+                <span></span>
                 <!--<span>
                         <a data-external="recommend" href="javascript:void(0);">推荐驾校</a>
                     </span>-->
             </div>
             <!-- <div class="external-centext-tab"> -->
             <div class="external-centext" style="display: block;">
-                <span>
-                    <a href="http://baa.bitauto.com/" title="汽车论坛" target="_blank">汽车论坛</a>
-                </span>
+                @* <span> *@
+                @*     <a href="http://baa.bitauto.com/" title="汽车论坛" target="_blank">汽车论坛</a> *@
+                @* </span> *@
                 <span>
                     <a href="http://qiche.cncn.com/" title="长途汽车查询" target="_blank">长途汽车查询</a>
                 </span>
@@ -504,9 +435,9 @@
                 <span>
                     <a href="http://car.bitauto.com/" title="汽车大全" target="_blank">汽车大全</a>
                 </span>
-                <span>
-                    <a href="http://news.xgo.com.cn/" title="点评新闻" target="_blank">点评新闻</a>
-                </span>
+                @* <span> *@
+                @*     <a href="http://news.xgo.com.cn/" title="点评新闻" target="_blank">点评新闻</a> *@
+                @* </span> *@
                 <span>
                     <a href="http://news.gaotie.cn/" title="高速铁路" target="_blank">高速铁路</a>
                 </span>
@@ -522,9 +453,9 @@
                 <span>
                     <a href="http://www.61baobao.com/" title="儿歌" target="_blank">儿歌</a>
                 </span>
-                <span>
-                    <a href="http://news.szhk.com/" title="最新新闻" target="_blank">最新新闻</a>
-                </span>
+                @* <span> *@
+                @*     <a href="http://news.szhk.com/" title="最新新闻" target="_blank">最新新闻</a> *@
+                @* </span> *@
                 <span>
                     <a href="http://tuanche.com/" title="汽车团购" target="_blank">汽车团购</a>
                 </span>
@@ -538,140 +469,22 @@
 
             </div>
 
-            <div class="external-centext" id="hotareaid">
-
-                <span><a rulname="北京" urlpath="/bj/" href="http://jiaxiao.jxedt.com/bj/" target="_blank" title="北京驾校">北京驾校</a></span>
-                <span><a rulname="天津" urlpath="/tj/" href="http://jiaxiao.jxedt.com/tj/" target="_blank" title="天津驾校">天津驾校</a></span>
-                <span><a rulname="上海" urlpath="/sh/" href="http://jiaxiao.jxedt.com/sh/" target="_blank" title="上海驾校">上海驾校</a></span>
-                <span><a rulname="重庆" urlpath="/cq/" href="http://jiaxiao.jxedt.com/cq/" target="_blank" title="重庆驾校">重庆驾校</a></span>
-                <span><a rulname="杭州" urlpath="/hangzhou/" href="http://jiaxiao.jxedt.com/hangzhou/" target="_blank" title="杭州驾校">杭州驾校</a></span>
-                <span><a rulname="宁波" urlpath="/ningbo/" href="http://jiaxiao.jxedt.com/ningbo/" target="_blank" title="宁波驾校">宁波驾校</a></span>
-                <span><a rulname="南京" urlpath="/nanjing/" href="http://jiaxiao.jxedt.com/nanjing/" target="_blank" title="南京驾校">南京驾校</a></span>
-                <span><a rulname="苏州" urlpath="/suzhou/" href="http://jiaxiao.jxedt.com/suzhou/" target="_blank" title="苏州驾校">苏州驾校</a></span>
-                <span><a rulname="长春" urlpath="/changchun/" href="http://jiaxiao.jxedt.com/changchun/" target="_blank" title="长春驾校">长春驾校</a></span>
-                <span><a rulname="石家庄" urlpath="/sjz/" href="http://jiaxiao.jxedt.com/sjz/" target="_blank" title="石家庄驾校">石家庄驾校</a></span>
-                <span><a rulname="济南" urlpath="/jinan/" href="http://jiaxiao.jxedt.com/jinan/" target="_blank" title="济南驾校">济南驾校</a></span>
-                <span><a rulname="青岛" urlpath="/qingdao/" href="http://jiaxiao.jxedt.com/qingdao/" target="_blank" title="青岛驾校">青岛驾校</a></span>
-                <span><a rulname="福州" urlpath="/fuzhou/" href="http://jiaxiao.jxedt.com/fuzhou/" target="_blank" title="福州驾校">福州驾校</a></span>
-                <span><a rulname="厦门" urlpath="/xiamen/" href="http://jiaxiao.jxedt.com/xiamen/" target="_blank" title="厦门驾校">厦门驾校</a></span>
-                <span><a rulname="广州" urlpath="/guangzhou/" href="http://jiaxiao.jxedt.com/guangzhou/" target="_blank" title="广州驾校">广州驾校</a></span>
-                <span><a rulname="深圳" urlpath="/shenzhen/" href="http://jiaxiao.jxedt.com/shenzhen/" target="_blank" title="深圳驾校">深圳驾校</a></span>
-                <span><a rulname="南宁" urlpath="/nanning/" href="http://jiaxiao.jxedt.com/nanning/" target="_blank" title="南宁驾校">南宁驾校</a></span>
-                <span><a rulname="海口" urlpath="/haikou/" href="http://jiaxiao.jxedt.com/haikou/" target="_blank" title="海口驾校">海口驾校</a></span>
-                <span><a rulname="哈尔滨" urlpath="/heb/" href="http://jiaxiao.jxedt.com/heb/" target="_blank" title="哈尔滨驾校">哈尔滨驾校</a></span>
-                <span><a rulname="乌鲁木齐" urlpath="/wlmq/" href="http://jiaxiao.jxedt.com/wlmq/" target="_blank" title="乌鲁木齐驾校">乌鲁木齐驾校</a></span>
-                <span><a rulname="武汉" urlpath="/changsha/" href="http://jiaxiao.jxedt.com/changsha/" target="_blank" title="长沙驾校">长沙驾校</a></span>
-                <span><a rulname="南昌" urlpath="/nanchang/" href="http://jiaxiao.jxedt.com/nanchang/" target="_blank" title="南昌驾校">南昌驾校</a></span>
-                <span><a rulname="合肥" urlpath="/hefei/" href="http://jiaxiao.jxedt.com/hefei/" target="_blank" title="合肥驾校">合肥驾校</a></span>
-                <span><a rulname="郑州" urlpath="/zhengzhou/" href="http://jiaxiao.jxedt.com/zhengzhou/" target="_blank" title="郑州驾校">郑州驾校</a></span>
-                <span><a rulname="成都" urlpath="/chengdu/" href="http://jiaxiao.jxedt.com/chengdu/" target="_blank" title="成都驾校">成都驾校</a></span>
-                <span><a rulname="昆明" urlpath="/kunming/" href="http://jiaxiao.jxedt.com/kunming/" target="_blank" title="昆明驾校">昆明驾校</a></span>
-                <span><a rulname="贵阳" urlpath="/guiyang/" href="http://jiaxiao.jxedt.com/guiyang/" target="_blank" title="贵阳驾校">贵阳驾校</a></span>
-                <span><a rulname="呼和浩特" urlpath="/hhht/" href="http://jiaxiao.jxedt.com/hhht/" target="_blank" title="呼和浩特驾校">呼和浩特驾校</a></span>
-                <span><a rulname="大连" urlpath="/dalian/" href="http://jiaxiao.jxedt.com/dalian/" target="_blank" title="大连驾校">大连驾校</a></span>
-                <span> <a rulname="拉萨" urlpath="/lasa/" href="http://jiaxiao.jxedt.com/lasa/" target="_blank" title="拉萨驾校">拉萨驾校</a></span>
-                <span><a rulname="西安" urlpath="/xian/" href="http://jiaxiao.jxedt.com/xian/" target="_blank" title="西安驾校">西安驾校</a></span>
-                <span><a rulname="银川" urlpath="/yinchuan/" href="http://jiaxiao.jxedt.com/yinchuan/" target="_blank" title="银川驾校">银川驾校</a></span>
-                <span><a rulname="太原" urlpath="/taiyuan/" href="http://jiaxiao.jxedt.com/taiyuan/" target="_blank" title="太原驾校">太原驾校</a></span>
-                <span><a rulname="西宁" urlpath="/xining/" href="http://jiaxiao.jxedt.com/xining/" target="_blank" title="西宁驾校">西宁驾校</a></span>
-                <span><a rulname="兰州" urlpath="/lanzhou/" href="http://jiaxiao.jxedt.com/lanzhou/" target="_blank" title="兰州驾校">兰州驾校</a></span>
-                <span><a rulname="沈阳" urlpath="/shenyang/" href="http://jiaxiao.jxedt.com/shenyang/" target="_blank" title="沈阳驾校">沈阳驾校</a></span>
 
 
-
-
-            </div>
-            <div class="external-centext">
-                <!--驾校疑难解答-->
-                <span>
-                    <a href="http://www.jxedt.com/wen/qita/" title="其他问题" target="_blank">其他问题</a>
-                </span>
-                <span>
-                    <a href="http://www.jxedt.com/wen/" title="驾校问答" target="_blank">驾校问答</a>
-                </span>
-                <span>
-                    <a href="http://www.jxedt.com/wen/zzz/" title="暂住证" target="_blank">暂住证</a>
-                </span>
-                <span>
-                    <a href="http://www.jxedt.com/wen/yueche/" title="约车" target="_blank">约车</a>
-                </span>
-                <span>
-                    <a href="http://www.jxedt.com/wen/lianche/" title="练车问题" target="_blank">练车问题</a>
-                </span>
-                <span>
-                    <a href="http://www.jxedt.com/wen/kaoshi/" title="考试问题" target="_blank">考试问题</a>
-                </span>
-                <span>
-                    <a href="http://www.jxedt.com/wen/bukao/" title="补考问题" target="_blank">补考问题</a>
-                </span>
-                <span>
-                    <a href="http://www.jxedt.com/wen/baoming/" title="报名须知" target="_blank">报名须知</a>
-                </span>
-                <span>
-                    <a href="http://www.jxedt.com/wen/xuefei/" title="学费" target="_blank">学费</a>
-                </span>
-                <span>
-                    <a href="http://www.jxedt.com/wen/luxian/" title="路线" target="_blank">路线</a>
-                </span>
-                <span>
-                    <a href="http://www.jxedt.com/wen/jiaolian/" title="教练" target="_blank">教练</a>
-                </span>
-                <span>
-                    <a href="http://www.jxedt.com/wen/zbzl/" title="准备资料/证件" target="_blank">准备资料/证件</a>
-                </span>
-                <span>
-                    <a href="http://www.jxedt.com/wen/ydhk/" title="异地户口" target="_blank">异地户口</a>
-                </span>
-                <span>
-                    <a href="http://www.jxedt.com/wen/sj/" title="练车时间" target="_blank">练车时间</a>
-                </span>
-                <span>
-                    <a href="http://www.jxedt.com/wen/cd/" title="练车场地" target="_blank">练车场地</a>
-                </span>
-                <span>
-                    <a href="http://www.jxedt.com/wen/fy/" title="补考费用" target="_blank">补考费用</a>
-                </span>
-                <span>
-                    <a href="http://www.jxedt.com/wen/zj/" title="增驾" target="_blank">增驾</a>
-                </span>
-                <span>
-                    <a href="http://www.jxedt.com/wen/ysbb/" title="遗失补办" target="_blank">遗失补办</a>
-                </span>
-                <span>
-                    <a href="http://www.jxedt.com/wen/xjhl/" title="新旧换领" target="_blank">新旧换领</a>
-                </span>
-                <span>
-                    <a href="http://www.jxedt.com/wen/ydzy/" title="异地转移" target="_blank">异地转移</a>
-                </span>
-                <span>
-                    <a href="http://www.jxedt.com/wen/jwjs/" title="境外驾驶证" target="_blank">境外驾驶证</a>
-                </span>
-                <span>
-                    <a href="http://www.jxedt.com/wen/quzheng/" title="取证问题" target="_blank">取证问题</a>
-                </span>
-                <span>
-                    <a href="http://www.jxedt.com/wen/bclx/" title="班车路线" target="_blank">班车路线</a>
-                </span>
-                <span>
-                    <a href="http://www.jxedt.com/wen/gjlx/" title="公交路线" target="_blank">公交路线</a>
-                </span>
-                <span>
-                    <a href="http://www.jxedt.com/wen/jljs/" title="教练接送" target="_blank">教练接送</a>
-                </span>
-
-            </div>
             <!-- </div> -->
         </div>
         <div class="comment-footer-about">
             <div class="row comment-footer-logo">
                 <div>
                     <div class="comment-footer-image">
-
+                        @* <img src="/Content/drive/cw.png" alt=""> *@
+                        <h2>网上学习</h2>
                     </div>
                     <div class="comment-footer-describe">
-
                     </div>
                 </div>
+                <p class="comment-footer-org">Copyright © 2003-2014 深圳市成为信息技术有限公司 All Rights Reserve<a href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action" target="_blank"><span>粤ICP备08101333号-6 </span></a></p>
+                <strong>全国免费咨询热线：</strong>400-900-9260
             </div>
             <div class="row">
                 <div class="row comment-footer-web">
@@ -715,17 +528,29 @@
 
     <script src="~/Scripts/drive/slider/js/index.js" type="text/javascript" charset="utf-8">
     </script>
-<script type="text/javascript">
-    $(document).ready(function(){
-        $(".page-warp a").each(function (index) {
-            console.log($(".page-warp a"));
-            $("a").eq(index).click(function(){ 
-                $(".page-warp a").removeClass("active");
-                $(this).addClass("active");
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".page-warp a").each(function (index) {
+                console.log($(".page-warp a"));
+                $("a").eq(index).click(function () {
+                    $(".page-warp a").removeClass("active");
+                    $(this).addClass("active");
+                });
             });
+
         });
- 
-    });
-</script>
+
+
+        $(".go_to").click(function () {
+            var enumType = this.getAttribute("enumType");
+            var enumValue = this.getAttribute("enumValue");
+            var selectpath = this.getAttribute("selectpath");
+            var areastr = this.getAttribute("areastr");
+            var citystr = this.getAttribute("citystr");
+            console.log(enumType, enumValue);
+            $("#schoollist").empty();
+            //           $.get('/Home/IndexNew?type=' + enumType + '&value=' + enumValue);
+        });
+    </script>
 </body>
 </html>

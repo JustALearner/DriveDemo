@@ -14,5 +14,6 @@ namespace Drive.WebApp.Models
         public string Comment { get; set; }
         public string[] Type { get; set; }
         public string Money { get; set; }
+        public string License { get; set; }
     }
 }

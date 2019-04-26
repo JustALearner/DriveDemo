@@ -1,0 +1,226 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>敏感词库</title>
+    <link href="../../Content/themes/default/easyui.css" rel="stylesheet" />
+    <link href="../../Content/themes/icon.css" rel="stylesheet" />
+    <link href="~/Content/themes/demo.css" rel="stylesheet" />
+
+
+    <script src="../../Scripts/jquery.min.js"></script>
+    <script src="../../Scripts/jquery.easyui.min.js"></script>
+
+</head>
+<body>
+
+    <table id="dg"></table>
+
+    <script type="text/javascript">
+    Date.prototype.format = function (format) {
+        var o = {
+            "M+": this.getMonth() + 1, //month
+            "d+": this.getDate(),    //day
+            "h+": this.getHours(),   //hour
+            "m+": this.getMinutes(), //minute
+            "s+": this.getSeconds(), //second
+            "q+": Math.floor((this.getMonth() + 3) / 3),  //quarter
+            "S": this.getMilliseconds() //millisecond
+        };
+        if (/(y+)/.test(format))
+            format = format.replace(RegExp.$1,
+                (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+        for (var k in o)
+            if (new RegExp("(" + k + ")").test(format))
+                format = format.replace(RegExp.$1,
+                    RegExp.$1.length == 1 ? o[k] :
+                    ("00" + o[k]).substr(("" + o[k]).length));
+        return format;
+    };
+    var rows = [{ "Code": "1", "Name": "fxx", "CreateTime": "\/Date(1555571283046)\/" }, { "Code": "2", "Name": "sxx", "CreateTime": "\/Date(1555571283046)\/" }, { "Code": "3", "Name": "xxx", "CreateTime": "\/Date(1555571283046)\/" }, { "Code": "4", "Name": "qqq", "CreateTime": "\/Date(1555571283046)\/" }, { "Code": "5", "Name": "呵呵", "CreateTime": "\/Date(1555571283046)\/" }, { "Code": "6", "Name": "rXX", "CreateTime": "\/Date(1555571283046)\/" }, { "Code": "7", "Name": "你妹", "CreateTime": "\/Date(1555571283046)\/" }, { "Code": "8", "Name": "我次奥", "CreateTime": "\/Date(1555571283046)\/" }, { "Code": "9", "Name": "牛B", "CreateTime": "\/Date(1555571283046)\/" }, { "Code": "10", "Name": "我次奥r", "CreateTime": "\/Date(1555571283046)\/" }, { "Code": "11", "Name": "lalalar", "CreateTime": "\/Date(1555571283046)\/" }];
+    function pagerFilter(data) {
+        if (typeof data.length == 'number' && typeof data.splice == 'function') {    // 判断数据是否是数组
+            data = {
+                total: data.length,
+                rows: data
+            }
+        }
+        var dg = $(this);
+        var opts = dg.datagrid('options');
+        var pager = dg.datagrid('getPager');
+        pager.pagination({
+            onSelectPage: function (pageNum, pageSize) {
+                opts.pageNumber = pageNum;
+                opts.pageSize = pageSize;
+                pager.pagination('refresh', {
+                    pageNumber: pageNum,
+                    pageSize: pageSize
+                });
+                dg.datagrid('loadData', data);
+            }
+        });
+        if (!data.originalRows) {
+            data.originalRows = (data.rows);
+        }
+        var start = (opts.pageNumber - 1) * parseInt(opts.pageSize);
+        var end = start + parseInt(opts.pageSize);
+        data.rows = (data.originalRows.slice(start, end));
+        return data;
+    }
+
+    $('#dg').datagrid({
+        title: "敏感词库",
+        iconCls: 'icon-save',
+        methord: 'get',
+        url: "/Home/Words/",
+        sortName: 'Id',
+        sortOrder: 'desc',
+        idField: 'Code',
+        border: true,
+        width: 1000,
+        height: 500,
+        columns: [
+            [
+                { field: 'Code', title: 'Code', width: 100 },
+                { field: 'Name', title: 'Name', width: 100, editor: 'text' },
+                { field: 'CreateTime', title: 'Date', width: 100, align: 'left', formatter: formatDate }
+            ]
+        ],
+        toolbar: [
+            //               {
+            //                    text: 'Code:&nbsp;<input type="text" id="wordcode" style="height:18px; width: 100px;line-height: 18px; "/>'
+            //                }, '-',
+            {
+                text:
+                    'Name:&nbsp;<input type="text" id="wordname" style="height:18px; width: 100px;line-height: 18px; "/>'
+            }, '-',
+            {
+                text: '新增',
+                iconCls: 'icon-add',
+                handler: add
+            }, '-',
+            {
+                text: '修改',
+                iconCls: 'icon-edit',
+                handler: edit
+            }, '-', {
+                text: '删除',
+                iconCls: 'icon-remove',
+                handler: remove
+            }, '-', {
+                text: '保存',
+                iconCls: 'icon-save',
+                handler: save
+            }
+        ],
+        pagination: true,
+        fit: true,
+        fitColumns: true,
+        singleSelect: true,
+        striped: true,
+        onBeforeEdit: function(index, row) {
+            row.editing = true;
+            updateActions(index);
+        },
+        onAfterEdit: function(index, row) {
+            row.editing = false;
+            updateActions(index);
+        },
+        onCancelEdit: function(index, row) {
+            row.editing = false;
+            updateActions(index);
+        },
+        loadFilter: pagerFilter,
+
+
+    });//.datagrid('loadData',rows);
+
+
+    function updateActions(index) {
+        $('#dg').datagrid('updateRow', {
+            index: index,
+            row: {}
+        });
+    }
+
+    function getRowIndex() {
+        var ed = $('#dg').datagrid('getSelected');
+        var index = $('#dg').datagrid('getRowIndex', ed);
+        return index;
+    }
+    function add() {
+        var l = rows.length;
+        var wordcode = parseInt(rows[l - 1].Code) + 1;
+        var wordname = $("#wordname").val();
+
+        if (wordcode === '' || wordname === '') {
+            $.messager.alert('code 和 name 需填写完整');
+
+            return;
+        }
+        rows.push({
+            Code: wordcode,
+            Name: wordname,
+            CreateTime: new Date()
+        });
+//        console.log(rows);
+//        $('#dg').datagrid('appendRow', {
+//            Code: wordcode,
+//            Name: wordname,
+//            CreateTime: new Date()
+//        });
+
+        $('#dg').datagrid('reload');
+        var options = $('#dg').datagrid('getPager').pagination("options");
+//        var curr = options.pageNumber;
+        var total = options.total;
+        var max = Math.ceil(total / options.pageSize);
+        $('#dg').datagrid('getPager').pagination("select", max);
+    };
+    function edit() {
+//        console.log(getRowIndex());
+        $('#dg').datagrid('beginEdit', getRowIndex());
+    };
+    function remove() {
+        $.messager.confirm('Confirm', 'Are you sure?', function (r) {
+            if (r) {
+//                $('#dg').datagrid('deleteRow', getRowIndex());
+                rows.splice(getRowIndex(), 1);
+                $('#dg').datagrid('loadData', rows);
+            }
+        });
+    };
+    function save() {
+        $('#dg').datagrid('endEdit', getRowIndex());
+
+    };
+
+    function formatDate(value) {
+        if (value == null || value == '') {
+            return '';
+        }
+        var dt;
+        if (value instanceof Date) {
+            dt = value;
+        }
+        else {
+            dt = new Date(value);
+            if (isNaN(dt)) {
+                value = value.replace(/\/Date\((-?\d+)\)\//, '$1'); //标红的这段是关键代码，将那个长字符串的日期值转换成正常的JS日期格式
+                dt = new Date();
+                dt.setTime(value);
+
+            }
+        }
+        return dt.format("yyyy-MM-dd");   //这里用到一个javascript的Date类型的拓展方法，这个是自己添加的拓展方法，在后面的步骤3定义
+    }
+
+
+    </script>
+</body>
+</html>
